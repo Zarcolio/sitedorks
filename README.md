@@ -13,7 +13,6 @@ Search Google for a search term with different websites. Use escaped quotes when
 optional arguments:
   -h, --help  show this help message and exit
   -c <count>  How many websites checked per query. Google has a maximum length for queries.
-  -e <engine>  Search with 'google' or 'bing', defaults to 'google'.
   -f <file>   Enter a custom website list.
   -q <query>  Enter a search term.
 ```
