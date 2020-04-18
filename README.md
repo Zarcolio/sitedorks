@@ -32,8 +32,8 @@ sitedorks -f commdorks.txt -s disable -c 10
 ```
 This opens 2 URLs in your default webbrowser:
 
-* https://www.google.com/search?num=100&filter=0&q=%20bcwt.webex.com+|+bluejeans.com+|+chat.whatsapp.com+|+gotomeet.me+|+hangouts.google.com/group+|+join.slack.com/t+|+join.skype.com/invite+|+meet.google.com+|+meet.jit.si+|+meet.starleaf.com
-* https://www.google.com/search?num=100&filter=0&q=%20teams.microsoft.com/l/meetup-join+|+t.me/joinchat+|+zoom.us/j
+* https://www.google.com/search?num=100&filter=0&q=%20%22bcwt.webex.com%22+|+%22bluejeans.com%22+|+%22chat.whatsapp.com%22+|+%22gotomeet.me%22+|+%22hangouts.google.com/group%22+|+%22join.slack.com/t%22+|+%22join.skype.com/invite%22+|+%22meet.google.com%22+|+%22meet.jit.si%22+|+%22meet.starleaf.com%22
+* https://www.google.com/search?num=100&filter=0&q=%20%22teams.microsoft.com/l/meetup-join%22+|+%22t.me/joinchat%22+|+%22zoom.us/j%22
 
 # Contribute?
 Do you have some usefull additions to the script or to the list of websites, please send in a pull request to help make this script better :)
