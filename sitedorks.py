@@ -6,6 +6,7 @@ import webbrowser
 
 sArgParser=argparse.ArgumentParser(description='Search Google for a search term with different websites. Use escaped quotes when necessary: \\\"')
 sArgParser.add_argument('-c', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
+sArgParser.add_argument('-e', metavar="<engine>", help='Search with \'google\' or \'bing\', defaults to \'google\'.', choices=['bing', 'google'], default="google")
 sArgParser.add_argument('-f', metavar="<file>", help='Enter a custom website list.')
 sArgParser.add_argument('-q', metavar="<query>",  help='Enter a search term.', required=True)
 aArguments=sArgParser.parse_args()
@@ -18,9 +19,13 @@ else:
 if aArguments.f:
     sInputFile = aArguments.f
 else:
-    sInputFile = "zorks-domains.txt"
+    sInputFile = "dorkdomains.txt"
 
-sQuery = "https://www.google.nl/search?num=100&filter=0&q=" + urllib.parse.quote(aArguments.q)
+if aArguments.e == "google":
+    sQuery = "https://www.google.com/search?num=100&filter=0&q=" + urllib.parse.quote(aArguments.q)
+elif aArguments.e == "bing":
+    sQuery = "https://www.bing.com/search?&q=" + urllib.parse.quote(aArguments.q)
+
 
 try:
     fInputFile = open(sInputFile, 'r')
