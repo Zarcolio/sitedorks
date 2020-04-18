@@ -8,8 +8,15 @@ sArgParser=argparse.ArgumentParser(description='Search Google for a search term 
 sArgParser.add_argument('-c', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 #sArgParser.add_argument('-e', metavar="<engine>", help='Search with \'google\' or \'bing\', defaults to \'google\'.', choices=['bing', 'google', 'yahoo'], default="google")
 sArgParser.add_argument('-f', metavar="<file>", help='Enter a custom website list.')
-sArgParser.add_argument('-q', metavar="<query>",  help='Enter a search term.', required=True)
+sArgParser.add_argument('-s', metavar="<status>",help='Enable or disable the \'site:\' operator, defaults to \'enable\'.',default='enable', choices=['enable', 'disable'])
+sArgParser.add_argument('-q', metavar="<query>",  help='Enter a search term.')
 aArguments=sArgParser.parse_args()
+
+if not aArguments.q:
+    sQuery = ""
+else:
+    sQuery = urllib.parse.quote(aArguments.q)
+
 
 if aArguments.c:
     iNewUrlAfter = int(aArguments.c)
@@ -21,7 +28,12 @@ if aArguments.f:
 else:
     sInputFile = "dorkdomains.txt"
 
-sQuery = "https://www.google.com/search?num=100&filter=0&q=" + urllib.parse.quote(aArguments.q)
+if aArguments.s == "enable":
+    sSite = "site:"
+else:
+    sSite = ""
+
+sQuery = "https://www.google.com/search?num=100&filter=0&q=" + sQuery
 
 '''
 if aArguments.e == "google":
@@ -32,14 +44,12 @@ elif aArguments.e == "yahoo":
     sQuery = "https://search.yahoo.com/search?n=100&p=" + urllib.parse.quote(aArguments.q)
 '''
 
-
 try:
     fInputFile = open(sInputFile, 'r')
     lInputFile = fInputFile.readlines()
 except:
     print(sInputFile + " not found...")
     exit(2)
-
 
 iFirst = 0
 iCount = 0
@@ -50,9 +60,9 @@ for sInputFileLine in lInputFile:
     sInputFileLine = sInputFileLine.strip()
     if iFirst == 0:
         dQuery[iUrls] = ""
-        dQuery[iUrls] += sQuery+ "+site:" + sInputFileLine
+        dQuery[iUrls] += sQuery + " " + sSite + sInputFileLine
     else:
-        dQuery[iUrls] += "+OR+" + "site:" + sInputFileLine
+        dQuery[iUrls] += "+OR+" + sSite + sInputFileLine
 
     if iFirst == 0: iFirst = 1
 

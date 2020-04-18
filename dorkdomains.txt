@@ -22,7 +22,6 @@ hubspot.net
 ideone.com
 jsfiddle.net
 multiscreensite.com
-osdn.net
 pastebin.com
 pastefs.com
 pastelink.net
