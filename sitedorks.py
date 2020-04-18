@@ -5,9 +5,15 @@ import urllib.parse
 import webbrowser
 
 sArgParser=argparse.ArgumentParser(description='Search Google for a search term with different websites. Use escaped quotes when necessary: \\\"')
-sArgParser.add_argument('-q', help='Enter a search term.', required=True)
-sArgParser.add_argument('-f', help='Enter a custom website list.')
+sArgParser.add_argument('-c', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
+sArgParser.add_argument('-f', metavar="<file>", help='Enter a custom website list.')
+sArgParser.add_argument('-q', metavar="<query>",  help='Enter a search term.', required=True)
 aArguments=sArgParser.parse_args()
+
+if aArguments.c:
+    iNewUrlAfter = int(aArguments.c)
+else:
+    iNewUrlAfter = 30
 
 if aArguments.f:
     sInputFile = aArguments.f
@@ -24,24 +30,23 @@ except:
     exit(2)
 
 
-iNewPageAfter = 30
 iFirst = 0
 iCount = 0
-iPage = 0
+iUrls = 0
 dQuery = {}
 for sInputFileLine in lInputFile:
     iCount += 1
     sInputFileLine = sInputFileLine.strip()
     if iFirst == 0:
-        dQuery[iPage] = ""
-        dQuery[iPage] += sQuery+ "+site:" + sInputFileLine
+        dQuery[iUrls] = ""
+        dQuery[iUrls] += sQuery+ "+site:" + sInputFileLine
     else:
-        dQuery[iPage] += "+|" + "site:" + sInputFileLine
+        dQuery[iUrls] += "+|" + "site:" + sInputFileLine
 
     if iFirst == 0: iFirst = 1
 
-    if iCount % iNewPageAfter == 0:
-        iPage += 1
+    if iCount % iNewUrlAfter == 0:
+        iUrls += 1
         iFirst = 0
 
 for sSingleQuery in dQuery.values():
