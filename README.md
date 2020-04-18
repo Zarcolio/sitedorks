@@ -27,4 +27,4 @@ This opens 2 URLs in your default webbrowser:
 * https://www.google.nl/search?num=100&filter=0&q=%22uber.com%22+site:slides.com+|site:slideshare.net+|site:slidex.tips+|site:sway.office.com+|site:trello.com+|site:visme.co+|site:webflow.com+|site:wufoo.com+|site:ziladoc.com+|site:zoho.com+|site:zonebourse.com
 
 # Contribute?
-Do you have some usefull additions to the script of to the list of websites, please send in a pull request to help make this script better :)
+Do you have some usefull additions to the script or to the list of websites, please send in a pull request to help make this script better :)
