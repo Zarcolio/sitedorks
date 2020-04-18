@@ -6,7 +6,7 @@ Sitedork should be able to run with a default Kali Linux installation without in
 
 # Usage
 ```
-usage: sitedorks.py [-h] [-c <count>] [-f <file>] -q <query>
+usage: sitedorks [-h] [-c <count>] [-f <file>] -q <query>
 
 Search Google for a search term with different websites. Use escaped quotes when necessary: \"
 
