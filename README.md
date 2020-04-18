@@ -1,5 +1,5 @@
 # About sitedorks
-Search Google for a search term with different websites. A default list is already provided.
+Search Google or Bing for a search term with different websites. A default list is already provided.
 
 # Install
 Sitedork should be able to run with a default Kali Linux installation without installing additional Python packages. If you're running into trouble running grepaddr, please drop me an issue and I'll try to fix it :)
