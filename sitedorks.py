@@ -26,12 +26,14 @@ else:
 if aArguments.f:
     sInputFile = aArguments.f
 else:
-    sInputFile = "dorkdomains.txt"
+    sInputFile = "domaindorks.txt"
 
 if aArguments.s == "enable":
     sSite = "site:"
+    sQuote = ""
 else:
     sSite = ""
+    sQuote = "%22"
 
 sQuery = "https://www.google.com/search?num=100&filter=0&q=" + sQuery
 
@@ -60,9 +62,9 @@ for sInputFileLine in lInputFile:
     sInputFileLine = sInputFileLine.strip()
     if iFirst == 0:
         dQuery[iUrls] = ""
-        dQuery[iUrls] += sQuery + " " + sSite + sInputFileLine
+        dQuery[iUrls] += sQuery + " " + sSite + sQuote + sInputFileLine + sQuote
     else:
-        dQuery[iUrls] += "+OR+" + sSite + sInputFileLine
+        dQuery[iUrls] += "+|+" + sSite + sQuote + sInputFileLine + sQuote
 
     if iFirst == 0: iFirst = 1
 
