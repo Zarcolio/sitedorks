@@ -34,6 +34,7 @@ regex101.com
 regexlib.com
 repl.it
 rextester.com
+scribd.com
 slidebean.com
 slides.com
 slideshare.net
