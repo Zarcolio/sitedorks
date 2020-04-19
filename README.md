@@ -1,5 +1,9 @@
 # About sitedorks
-Search Google or Bing for a search term with different websites. A default list is already provided.
+Search Google or Bing for a search term with different websites. A default list is already provided, which contains Github, Gitlab, Trello etc. Also a list available with googledorks for communication invites like WhatsApp, Skype and Zoom.
+
+# Why sitedorks?
+Why wouldn't you just enter dorks for several websites manually? 
+The script has a few useful functions. Google ignores too many keywords in a query and with argument -c it's easy to split a file with websites into new queries. Also, it's easy to create different input files for different uses. Adding new websites to your search query can be arranged by just adding them to an input file.
 
 # Install
 Sitedork should be able to run with a default Kali Linux installation without installing additional Python packages. If you're running into trouble running grepaddr, please drop me an issue and I'll try to fix it :)
