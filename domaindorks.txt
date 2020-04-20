@@ -11,6 +11,7 @@ core.windows.net
 dotnetfiddle.net
 ecitydoc.com
 emaze.com
+firebaseio.com
 formdesk.com
 form.jotform.com
 formlets.com
