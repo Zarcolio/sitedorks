@@ -3,11 +3,11 @@ Search Google or Bing for a search term with different websites. A default list 
 
 # Why sitedorks?
 Why wouldn't you just enter dorks for several websites manually? This script has a few useful functions:
-* Google and Yandex ignore too many keywords/characters in a query and with argument -c it's easy to split your dork into more queries.
-* It's easy to create different input files for different uses.
+* It's really easy to query different search engines.
 * Dorks can be executed per 1 or more categories.
+* It's easy to create different input files for different uses.
 * Adding new websites to your search query can be arranged by just adding them to an input file.
-And it's really easy to query different search engines.
+* Google and Yandex ignore too many keywords/characters in a query and with argument -c it's easy to split your dork into more queries.
 
 # Install
 Sitedork should be able to run with a default Kali Linux installation without installing additional Python packages. If you're running into trouble running grepaddr, please drop me an issue and I'll try to fix it :)
