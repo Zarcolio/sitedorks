@@ -27,7 +27,7 @@ optional arguments:
   -engine <engine>  Search with 'google', 'bing', 'yahoo' or 'yandex', defaults to 'google'.
   -file <file>      Enter a custom website list.
   -site <status>    Enable or disable the 'site:' operator, defaults to 'enable'.
-  -query <query>    Enter a search term.
+  -query <query>    Enter a mandatory search term.
 ```
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content? Use the following command:
@@ -41,7 +41,7 @@ This opens 2 URLs in your default webbrowser like these:
 
 Want to search for communication invites with yandex? Use the following command:
 ```
-sitedorks -cat comm -site disable -count 10 -engine yandex
+sitedorks -cat comm -site disable -count 10 -engine yandex -query uber
 ```
 This opens 2 URLs in your default webbrowser like these:
 
