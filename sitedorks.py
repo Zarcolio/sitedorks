@@ -10,7 +10,7 @@ sArgParser.add_argument('-count', metavar="<count>", help='How many websites che
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
 sArgParser.add_argument('-site', metavar="<status>",help='Enable or disable the \'site:\' operator, defaults to \'enable\'.',default='enable', choices=['enable', 'disable'])
-sArgParser.add_argument('-query', metavar="<query>",  help='Enter a search term.')
+sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.', required=True)
 aArguments=sArgParser.parse_args()
 
 if not aArguments.query:
