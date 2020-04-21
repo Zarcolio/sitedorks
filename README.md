@@ -17,7 +17,7 @@ Sitedork should be able to run with a default Kali Linux installation without in
 usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-site <status>]
 [-query <query>]
 
-Search Google for a search term with different websites. Use escaped quotes when necessary: \"
+Search Google for a search term with different websites. Use escaped quotes when your query contains spaces: \"
 
 optional arguments:
   -h, --help        show this help message and exit
