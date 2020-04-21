@@ -26,7 +26,7 @@ else:
 if aArguments.file:
     sInputFile = aArguments.file
 else:
-    sInputFile = "domaindorks.csv"
+    sInputFile = "sitedorks.csv"
 
 if aArguments.site == "on":
     sSite = "site:"
