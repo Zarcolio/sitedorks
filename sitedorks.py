@@ -9,7 +9,7 @@ sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or mor
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
-sArgParser.add_argument('-site', metavar="<status>",help='Enable or disable the \'site:\' operator, defaults to \'enable\'.',default='enable', choices=['enable', 'disable'])
+sArgParser.add_argument('-site', metavar="<status>",help='Turn the \'site:\' operator \'on\' or \'off\', defaults to \'on\'.',default='on', choices=['on', 'off'])
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.', required=True)
 aArguments=sArgParser.parse_args()
 
@@ -28,7 +28,7 @@ if aArguments.file:
 else:
     sInputFile = "domaindorks.csv"
 
-if aArguments.site == "enable":
+if aArguments.site == "on":
     sSite = "site:"
     sQuote = ""
 else:
@@ -68,8 +68,11 @@ for sInputFileLine in lInputFile:
     sInputFileLine = sInputFileLine.strip()
     lInputFileLineCsv = sInputFileLine.split(";")
 
-    if aArguments.cat and lInputFileLineCsv[1] not in lCategory:
-        continue
+    try:
+        if aArguments.cat and lInputFileLineCsv[1] not in lCategory:
+            continue
+    except:
+        print("Error in CSV file")
 
     iCount += 1
     if iFirst == 0:
