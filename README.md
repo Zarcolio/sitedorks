@@ -49,4 +49,4 @@ This opens 2 URLs in your default webbrowser like these:
 * https://www.google.com/search?num=100&filter=0&q=%20%22teams.microsoft.com/l/meetup-join%22+|+%22t.me/joinchat%22+|+%22zoom.us/j%22
 
 # Contribute?
-Do you have some usefull additions to the script or to the list of websites, please send in a pull request to help make this script better :)
+Do you have some usefull additions to the script or to the list of dorkable websites, please send in a pull request to help make this script better :)
