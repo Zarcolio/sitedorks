@@ -2,8 +2,12 @@
 Search Google or Bing for a search term with different websites. A default list is already provided, which contains Github, Gitlab, Trello etc. Also a list available with googledorks for communication invites like WhatsApp, Skype and Zoom.
 
 # Why sitedorks?
-Why wouldn't you just enter dorks for several websites manually? 
-The script has a few useful functions. Google and Yandex ignore too many keywords/characters in a query and with argument -c it's easy to split a file with websites into new queries. Also, it's easy to create different input files for different uses. Adding new websites to your search query can be arranged by just adding them to an input file. And it's really easy to query different search engines.
+Why wouldn't you just enter dorks for several websites manually? This script has a few useful functions:
+* Google and Yandex ignore too many keywords/characters in a query and with argument -c it's easy to split your dork into more queries.
+* It's easy to create different input files for different uses.
+* Dorks can be executed per 1 or more categories.
+* Adding new websites to your search query can be arranged by just adding them to an input file.
+And it's really easy to query different search engines.
 
 # Install
 Sitedork should be able to run with a default Kali Linux installation without installing additional Python packages. If you're running into trouble running grepaddr, please drop me an issue and I'll try to fix it :)
@@ -17,11 +21,13 @@ Search Google for a search term with different websites. Use escaped quotes when
 
 optional arguments:
   -h, --help        show this help message and exit
+  -cat <category>   Choose from 1 or more categories (cloud, code, comm, docs, other), use comma as delimiter. Defaults to all categories.
   -count <count>    How many websites checked per query. Google has a maximum length for queries.
   -engine <engine>  Search with 'google', 'bing', 'yahoo' or 'yandex', defaults to 'google'.
   -file <file>      Enter a custom website list.
   -site <status>    Enable or disable the 'site:' operator, defaults to 'enable'.
   -query <query>    Enter a search term.
+
 ```
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content? Use the following command:
