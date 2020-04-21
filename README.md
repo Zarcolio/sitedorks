@@ -10,17 +10,17 @@ Sitedork should be able to run with a default Kali Linux installation without in
 
 # Usage
 ```
-usage: sitedorks [-h] [-count <count>] [-engine <engine>] [-file <file>] [-site <status>]
-[-query <query>]
+usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-site <status>] [-query <query>]
 
 Search Google for a search term with different websites. Use escaped quotes when necessary: \"
 
 optional arguments:
   -h, --help        show this help message and exit
+  -cat <category>   Choose from 1 or more categories (cloud, code, docs, other). Defaults to all categories.
   -count <count>    How many websites checked per query. Google has a maximum length for queries.
-  -engine <engine>  Search with 'google' or 'bing', defaults to 'google'.
+  -engine <engine>  Search with 'google', 'bing', 'yahoo' or 'yandex', defaults to 'google'.
   -file <file>      Enter a custom website list.
-  -site <status>  Enable or disable the 'site:' operator, defaults to 'enable'.
+  -site <status>    Enable or disable the 'site:' operator, defaults to 'enable'.
   -query <query>    Enter a search term.
 ```
 # Examples
