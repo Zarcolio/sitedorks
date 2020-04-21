@@ -28,7 +28,6 @@ optional arguments:
   -file <file>      Enter a custom website list.
   -site <status>    Enable or disable the 'site:' operator, defaults to 'enable'.
   -query <query>    Enter a search term.
-
 ```
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content? Use the following command:
