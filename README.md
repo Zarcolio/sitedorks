@@ -20,7 +20,7 @@ optional arguments:
   -count <count>    How many websites checked per query. Google has a maximum length for queries.
   -engine <engine>  Search with 'google' or 'bing', defaults to 'google'.
   -file <file>      Enter a custom website list.
-  -status <status>  Enable or disable the 'site:' operator, defaults to 'enable'.
+  -site <status>  Enable or disable the 'site:' operator, defaults to 'enable'.
   -query <query>    Enter a search term.
 ```
 # Examples
