@@ -35,9 +35,9 @@ Want to look for "uber.com" with different sites containing all kinds of content
 ```
 sitedorks -query \"uber.com\"
 ```
-Want to search for communication invites with yandex? Use the following command:
+Want to search for communication invites with yandex but leave site: out of the query? Just use the following command:
 ```
-sitedorks -cat comm -site disable -count 10 -engine yandex -query uber
+sitedorks -cat comm -site disable -engine yandex -query uber
 ```
 # Contribute?
 Do you have some usefull additions to the script or to the list of dorkable websites, please send in a pull request to help make this script better :)
