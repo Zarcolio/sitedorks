@@ -5,7 +5,7 @@ import urllib.parse
 import webbrowser
 
 sArgParser=argparse.ArgumentParser(description='Search Google for a search term with different websites. Use escaped quotes when necessary: \\\"')
-sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (cloud, code, docs, other). Defaults to all categories.')
+sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (cloud, code, comm, docs, other), use , as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
@@ -21,12 +21,12 @@ else:
 if aArguments.count:
     iNewUrlAfter = int(aArguments.count)
 else:
-    iNewUrlAfter = 25
+    iNewUrlAfter = 15
 
 if aArguments.file:
     sInputFile = aArguments.file
 else:
-    sInputFile = "domaindorks.txt"
+    sInputFile = "domaindorks.csv"
 
 if aArguments.site == "enable":
     sSite = "site:"
@@ -34,6 +34,8 @@ if aArguments.site == "enable":
 else:
     sSite = ""
     sQuote = "%22"
+
+if aArguments.cat: lCategory = aArguments.cat.split(",")
 
 sQuery = "https://www.google.com/search?num=100&filter=0&q=" + sQuery
 sEndQuery = ")"
@@ -46,8 +48,6 @@ elif aArguments.engine == "yandex":
     sQuery = "https://yandex.com/search/?text=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "yahoo":
     sQuery = "https://search.yahoo.com/search?n=100&p=" + urllib.parse.quote(aArguments.query) + "+AND+("
-
-
 
 try:
     fInputFile = open(sInputFile, 'r')
@@ -63,17 +63,23 @@ dQuery = {}
 iLines = len(lInputFile)
 
 for sInputFileLine in lInputFile:
-    iCount += 1
+
+
     sInputFileLine = sInputFileLine.strip()
+    lInputFileLineCsv = sInputFileLine.split(";")
+
+    if aArguments.cat and lInputFileLineCsv[1] not in lCategory:
+        continue
+
+    iCount += 1
     if iFirst == 0:
         dQuery[iUrls] = ""
-        dQuery[iUrls] += sQuery + sSite + sQuote + sInputFileLine + sQuote
+        dQuery[iUrls] += sQuery + sSite + sQuote + lInputFileLineCsv[0] + sQuote
 
     else:
-        dQuery[iUrls] += "+|+" + sSite + sQuote + sInputFileLine + sQuote
+        dQuery[iUrls] += "+|+" + sSite + sQuote + lInputFileLineCsv[0] + sQuote
 
     if iFirst == 0: iFirst = 1
-
 
     if iCount % iNewUrlAfter == 0 or iCount == iLines:
         dQuery[iUrls] += sEndQuery
