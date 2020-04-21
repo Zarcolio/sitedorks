@@ -10,7 +10,8 @@ Sitedork should be able to run with a default Kali Linux installation without in
 
 # Usage
 ```
-usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-site <status>] [-query <query>]
+usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-site <status>]
+[-query <query>]
 
 Search Google for a search term with different websites. Use escaped quotes when necessary: \"
 
