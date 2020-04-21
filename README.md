@@ -39,9 +39,9 @@ This opens 2 URLs in your default webbrowser like these:
 * https://www.google.nl/search?num=100&filter=0&q=%22uber.com%22+site:123formbuilder.com+|site:amazonaws.com+|site:bitbucket.org+|site:cloudformz.com+|site:cloudfront.net+|site:codebeautify.org+|site:codepen.io+|site:cognitoforms.com+|site:core.windows.net+|site:ecitydoc.com+|site:emaze.com+|site:formdesk.com+|site:form.jotform.com+|site:formlets.com+|site:formsite.com+|site:forms.office.com+|site:formstack.com+|site:github.com+|site:gitlab.com+|site:haikudeck.com+|site:hubspot.net+|site:ideone.com+|site:jsfiddle.net+|site:multiscreensite.com+|site:pastebin.com+|site:pastefs.com+|site:pastelink.net+|site:prezi.com+|site:repl.it+|site:slidebean.com
 * https://www.google.nl/search?num=100&filter=0&q=%22uber.com%22+site:slides.com+|site:slideshare.net+|site:slidex.tips+|site:sway.office.com+|site:trello.com+|site:visme.co+|site:webflow.com+|site:wufoo.com+|site:ziladoc.com+|site:zoho.com+|site:zonebourse.com
 
-Want to search for communication invites? Use the following command:
+Want to search for communication invites with yandex? Use the following command:
 ```
-sitedorks -file commdorks.txt -site disable -count 10
+sitedorks -cat comm -site disable -count 10 -engine yandex
 ```
 This opens 2 URLs in your default webbrowser like these:
 
