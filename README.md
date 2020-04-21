@@ -1,5 +1,5 @@
 # About sitedorks
-Search Google or Bing for a search term with different websites. A default list is already provided, which contains Github, Gitlab, Trello etc. Also a list available with googledorks for communication invites like WhatsApp, Skype and Zoom.
+Search Google or Bing for a search term with different websites. A default list is already provided, which contains Github, Gitlab, Trello etc. Also a list available with googledorks for communication invites like WhatsApp, Skype and Zoom. Currently, a list of 74 dorkable site is available.
 
 # Why sitedorks?
 Why wouldn't you just enter dorks for several websites manually? This script has a few useful functions:
@@ -21,7 +21,8 @@ Search Google for a search term with different websites. Use escaped quotes when
 
 optional arguments:
   -h, --help        show this help message and exit
-  -cat <category>   Choose from 1 or more categories (cloud, code, comm, docs, other), use , as delimiter. Defaults to all categories.
+  -cat <category>   Choose from 1 or more categories (cloud, code, comm, docs, other), use , as delimiter. 
+                    Defaults to all categories.
   -count <count>    How many websites checked per query. Google has a maximum length for queries.
   -engine <engine>  Search with 'google', 'bing', 'yahoo' or 'yandex', defaults to 'google'.
   -file <file>      Enter a custom website list.
