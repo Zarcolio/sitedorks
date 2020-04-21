@@ -10,14 +10,13 @@ Sitedork should be able to run with a default Kali Linux installation without in
 
 # Usage
 ```
-usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-status <status>]
+usage: sitedorks [-h] [-count <count>] [-engine <engine>] [-file <file>] [-site <status>]
 [-query <query>]
 
 Search Google for a search term with different websites. Use escaped quotes when necessary: \"
 
 optional arguments:
   -h, --help        show this help message and exit
-  -cat <category>   Choose from 1 or more categories (cloud, code, docs, other). Defaults to all categories.
   -count <count>    How many websites checked per query. Google has a maximum length for queries.
   -engine <engine>  Search with 'google' or 'bing', defaults to 'google'.
   -file <file>      Enter a custom website list.
@@ -27,7 +26,7 @@ optional arguments:
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content? Use the following command:
 ```
-sitedorks -q \"uber.com\"
+sitedorks -query \"uber.com\"
 ```
 This opens 2 URLs in your default webbrowser like these:
 
@@ -36,7 +35,7 @@ This opens 2 URLs in your default webbrowser like these:
 
 Want to search for communication invites? Use the following command:
 ```
-sitedorks -f commdorks.txt -s disable -c 10
+sitedorks -file commdorks.txt -site disable -count 10
 ```
 This opens 2 URLs in your default webbrowser like these:
 
