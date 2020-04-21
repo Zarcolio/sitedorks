@@ -17,7 +17,6 @@ Search Google for a search term with different websites. Use escaped quotes when
 
 optional arguments:
   -h, --help        show this help message and exit
-  -cat <category>   Choose from 1 or more categories (cloud, code, docs, other). Defaults to all categories.
   -count <count>    How many websites checked per query. Google has a maximum length for queries.
   -engine <engine>  Search with 'google', 'bing', 'yahoo' or 'yandex', defaults to 'google'.
   -file <file>      Enter a custom website list.
