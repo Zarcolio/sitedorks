@@ -9,7 +9,7 @@ sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or mor
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\' or \'bing\', defaults to \'google\'.', choices=['bing', 'google', 'yahoo'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
-sArgParser.add_argument('-status', metavar="<status>",help='Enable or disable the \'site:\' operator, defaults to \'enable\'.',default='enable', choices=['enable', 'disable'])
+sArgParser.add_argument('-site', metavar="<status>",help='Enable or disable the \'site:\' operator, defaults to \'enable\'.',default='enable', choices=['enable', 'disable'])
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a search term.')
 aArguments=sArgParser.parse_args()
 
@@ -28,7 +28,7 @@ if aArguments.file:
 else:
     sInputFile = "domaindorks.txt"
 
-if aArguments.status == "enable":
+if aArguments.site == "enable":
     sSite = "site:"
     sQuote = ""
 else:
