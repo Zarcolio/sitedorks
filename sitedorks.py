@@ -30,7 +30,7 @@ else:
 if aArguments.file:
     sInputFile = aArguments.file
 else:
-    sInputFile = os.getcwd() + "/sitedorks.csv"
+    sInputFile = os.path.dirname(os.path.realpath(sys.argv[0])) + "/sitedorks.csv"
 
 if aArguments.site == "on":
     sSite = "site:"
@@ -76,9 +76,10 @@ for sInputFileLine in lInputFile:
     sInputFileLine = sInputFileLine.strip()
     lInputFileLineCsv = sInputFileLine.split(";")
 
-    if lInputFileLineCsv[0] in lExcludeDomains:
-        continue
-        
+    if aArguments.excl:
+        if lInputFileLineCsv[0] in lExcludeDomains:
+            continue
+
     try:
         if aArguments.cat and lInputFileLineCsv[1] not in lCategory:
             continue
