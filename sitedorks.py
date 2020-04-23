@@ -3,14 +3,18 @@
 import argparse
 import urllib.parse
 import webbrowser
+import sys
+import os
 
 sArgParser=argparse.ArgumentParser(description='Search Google for a search term with different websites. Use escaped quotes when necessary: \\\"')
 sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (cloud, code, comm, docs, other), use , as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
-sArgParser.add_argument('-site', metavar="<status>",help='Turn the \'site:\' operator \'on\' or \'off\', defaults to \'on\'.',default='on', choices=['on', 'off'])
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.', required=True)
+sArgParser.add_argument('-site', metavar="<status>",help='Turn the \'site:\' operator \'on\' or \'off\', defaults to \'on\'.',default='on', choices=['on', 'off'])
+sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded the domains from the search query.')
+
 aArguments=sArgParser.parse_args()
 
 if not aArguments.query:
@@ -26,7 +30,7 @@ else:
 if aArguments.file:
     sInputFile = aArguments.file
 else:
-    sInputFile = "sitedorks.csv"
+    sInputFile = os.getcwd() + "/sitedorks.csv"
 
 if aArguments.site == "on":
     sSite = "site:"
@@ -35,7 +39,11 @@ else:
     sSite = ""
     sQuote = "%22"
 
-if aArguments.cat: lCategory = aArguments.cat.split(",")
+if aArguments.cat:
+    lCategory = aArguments.cat.split(",")
+
+if aArguments.excl:
+    lExcludeDomains = aArguments.excl.split(",")
 
 sQuery = "https://www.google.com/search?num=100&filter=0&q=" + sQuery
 sEndQuery = ")"
@@ -68,6 +76,9 @@ for sInputFileLine in lInputFile:
     sInputFileLine = sInputFileLine.strip()
     lInputFileLineCsv = sInputFileLine.split(";")
 
+    if lInputFileLineCsv[0] in lExcludeDomains:
+        continue
+        
     try:
         if aArguments.cat and lInputFileLineCsv[1] not in lCategory:
             continue
