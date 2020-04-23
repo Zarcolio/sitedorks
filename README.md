@@ -7,6 +7,7 @@ Why wouldn't you just enter dorks for several websites manually? This script has
 * Dorks can be executed per 1 or more categories.
 * It's easy to create different input files for different uses.
 * Adding new websites to your search query can be arranged by just adding them to an input file.
+* Because it already has a lot of dorkable website included.
 * Google and Yandex ignore too many keywords/characters in a query and with argument -c it's easy to split your dork into more queries.
 
 # Install
