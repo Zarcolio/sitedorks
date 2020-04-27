@@ -103,5 +103,7 @@ for sInputFileLine in lInputFile:
         iUrls += 1
         iFirst = 0
 
+dQuery[iUrls] += ")"
+
 for sSingleQuery in dQuery.values():
     webbrowser.open(sSingleQuery)
