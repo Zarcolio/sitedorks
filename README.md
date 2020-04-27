@@ -29,7 +29,7 @@ optional arguments:
   -file <file>      Enter a custom website list.
   -query <query>    Enter a mandatory search term.
   -site <status>    Turn the 'site:' operator 'on' or 'off', defaults to 'on'.
-  -excl <domains>   Excluded the domains from the search query.
+  -excl <domains>   Excluded these domains from the search query.
 ```
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content? Use the following command:
