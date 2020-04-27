@@ -2,13 +2,13 @@
 Search Google or Bing for a search term with different websites. A default list is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc. Also a list available with googledorks for communication invites like WhatsApp, Skype and Zoom. Currently, a list of 80 dorkable websites is available.
 
 # Why sitedorks?
-Why wouldn't you just enter dorks for several websites manually? This script has a few useful functions:
+Why wouldn't you just enter dorks for several websites manually? Because:
 * It's really easy to query different search engines.
 * Dorks can be executed per 1 or more categories.
 * It's easy to create different input files for different uses.
 * Adding new websites to your search query can be arranged by just adding them to an input file.
-* Because it already has a lot of dorkable websites included.
-* Because the list with dorkable websites is updated regularly.
+* It already has a lot of dorkable websites included.
+* The list with dorkable websites is updated regularly.
 * Some search engines ignore too many keywords/characters in a query and with argument -c it's easy to split your dork into more queries.
 
 # Install
