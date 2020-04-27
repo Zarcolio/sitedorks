@@ -40,6 +40,7 @@ hubspot.net,cloud
 ideone.com,code
 join.skype.com/invite,comm
 join.slack.com/t,comm
+jotform.comforms
 jsbin.com,code
 jsfiddle.net,code
 markmail.org,mail
@@ -62,7 +63,7 @@ service-now.com,other
 sharepoint.com,docs
 slidebean.com,docs
 slides.com,docs
-slideshare.net,docs
+slideshare.net,docs,
 slidex.tips,docs
 snipplr.com,code
 subversion.assembla.com,code
@@ -73,6 +74,7 @@ t.me/joinchat,comm
 trafficmanager.net,cloud
 travis-ci.com,code
 trello.com,other
+typeform.com,forms
 visme.co,docs
 webflow.com,cloud
 wufoo.com,cloud
