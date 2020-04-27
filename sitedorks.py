@@ -13,7 +13,7 @@ sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'googl
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.', required=True)
 sArgParser.add_argument('-site', metavar="<status>",help='Turn the \'site:\' operator \'on\' or \'off\', defaults to \'on\'.',default='on', choices=['on', 'off'])
-sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded the domains from the search query.')
+sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded these domains from the search query.')
 
 aArguments=sArgParser.parse_args()
 
@@ -44,9 +44,6 @@ if aArguments.cat:
 
 if aArguments.excl:
     lExcludeDomains = aArguments.excl.split(",")
-
-sQuery = "https://www.google.com/search?num=100&filter=0&q=" + sQuery
-sEndQuery = ")"
 
 if aArguments.engine == "google":
     sQuery = "https://www.google.com/search?num=100&filter=0&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
