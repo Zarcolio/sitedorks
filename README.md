@@ -8,7 +8,7 @@ Why wouldn't you just enter dorks for several websites manually? This script has
 * It's easy to create different input files for different uses.
 * Adding new websites to your search query can be arranged by just adding them to an input file.
 * Because it already has a lot of dorkable websites included.
-* Google and Yandex ignore too many keywords/characters in a query and with argument -c it's easy to split your dork into more queries.
+* Some search engines ignore too many keywords/characters in a query and with argument -c it's easy to split your dork into more queries.
 
 # Install
 Sitedork should be able to run with a default Kali Linux installation without installing additional Python packages. If you're running into trouble running grepaddr, please drop me an issue and I'll try to fix it :)
