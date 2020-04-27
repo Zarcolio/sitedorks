@@ -8,6 +8,7 @@ Why wouldn't you just enter dorks for several websites manually? This script has
 * It's easy to create different input files for different uses.
 * Adding new websites to your search query can be arranged by just adding them to an input file.
 * Because it already has a lot of dorkable websites included.
+* Because the list with dorkable websites is updated regularly.
 * Some search engines ignore too many keywords/characters in a query and with argument -c it's easy to split your dork into more queries.
 
 # Install
