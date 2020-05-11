@@ -23,8 +23,8 @@ Search Google for a search term with different websites. Use escaped quotes when
 
 optional arguments:
   -h, --help        show this help message and exit
-  -cat <category>   Choose from 1 or more categories (carreers, cloud, code, edu, comm, docs, forms, social,
-                    other). Use ',' (comma) as delimiter. Defaults to all categories.
+  -cat <category>   Choose from at least 1 category (careers, cloud, code, edu, comm, docs, forms, social, other).
+                    Use ',' (comma) as delimiter. Defaults to all categories.
   -count <count>    How many websites checked per query. Google has a maximum length for queries.
   -engine <engine>  Search with 'google', 'bing', 'yahoo' or 'yandex', defaults to 'google'.
   -file <file>      Enter a custom website list.
