@@ -65,7 +65,15 @@ iFirst = 0
 iCount = 0
 iUrls = 0
 dQuery = {}
-iLines = len(lInputFile)
+
+if aArguments.cat:
+    iLines = sum(1 for s in lInputFile if "," + aArguments.cat in s)
+    if iLines == 0:
+        print("Category '" + aArguments.cat + "' not found, exiting...")
+        exit(2)
+else:
+    iLines = len(open(sInputFile).readlines())
+
 sEndQuery = ")"
 
 for sInputFileLine in lInputFile:
