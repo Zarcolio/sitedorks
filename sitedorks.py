@@ -7,7 +7,7 @@ import sys
 import os
 
 sArgParser=argparse.ArgumentParser(description='Search Google for a search term with different websites. Use escaped quotes when necessary: \\\"')
-sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (carreers, cloud, code, edu, comm, docs, forms, social, other), use \',\' (comma) as delimiter. Defaults to all categories.')
+sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (careers, cloud, code, edu, comm, docs, forms, social, other), use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
@@ -46,13 +46,13 @@ if aArguments.excl:
     lExcludeDomains = aArguments.excl.split(",")
 
 if aArguments.engine == "google":
-    sQuery = "https://www.google.com/search?num=100&filter=0&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
+    sQuery = "https://www.google.com/search?num=100&filter=0&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
 elif aArguments.engine == "bing":
-    sQuery = "https://www.bing.com/search?&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
+    sQuery = "https://www.bing.com/search?&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
 elif aArguments.engine == "yandex":
-    sQuery = "https://yandex.com/search/?text=" + urllib.parse.quote(aArguments.query) + "+AND+("
+    sQuery = "https://yandex.com/search/?text=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
 elif aArguments.engine == "yahoo":
-    sQuery = "https://search.yahoo.com/search?n=100&p=" + urllib.parse.quote(aArguments.query) + "+AND+("
+    sQuery = "https://search.yahoo.com/search?n=100&p=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
 
 try:
     fInputFile = open(sInputFile, 'r')
