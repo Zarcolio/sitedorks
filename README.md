@@ -40,6 +40,10 @@ Want to look for "uber.com" with different sites containing all kinds of content
 ```
 sitedorks -query \"uber.com\"
 ```
+Want to look for "uber website" (with quotes and spaces in the query)? Use the following command:
+```
+sitedorks -query "\"uber website\""
+```
 Want to search for communication invites with yandex but leave site: out of the query? Just use the following command:
 ```
 sitedorks -cat comm -site disable -engine yandex -query uber
