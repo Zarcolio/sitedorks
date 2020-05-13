@@ -36,7 +36,7 @@ optional arguments:
 
 ```
 # Examples
-Want to look for "uber.com" with different sites containing all kinds of content? Use the following command:
+Want to look for "uber.com" with different sites containing all kinds of content using Google? Use the following command:
 ```
 sitedorks -query \"uber.com\"
 ```
