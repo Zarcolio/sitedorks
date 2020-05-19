@@ -2,6 +2,7 @@
 8kun.top,social
 academia.edu,docs
 amazonaws.com,cloud
+censys.io,analysis
 azure-api.net,cloud
 azureedge.net,cloud
 azurewebsites.net,cloud
@@ -55,6 +56,7 @@ googleusercontent.com,cloud
 haikudeck.com,docs
 hangouts.google.com/group,comm
 hubspot.net,cloud
+hunter.io,analysis
 ideone.com,code
 indeed.com,careers
 instagram.com,social
@@ -76,7 +78,7 @@ meet.starleaf.com,comm
 monster.com,careers
 mvnrepository.com,code
 myspace.com,social
-packettotal.com,code
+packettotal.com,analysis
 paste2.org,code
 pastebin.com,code
 pastefs.com,code
