@@ -19,21 +19,22 @@ Sitedork should be able to run with a default Kali Linux installation without in
 usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] -query <query>
                  [-site <status>] [-excl <domains>]
 
-Use your favorite search engine to search for a search term with different websites. Use escaped quotes
-when search for an exact search term: \". Be sure to enclose a query with double quotes it contains shell
-control characters like space, ';', '>', '|', etc.
+Use your favorite search engine for a search term with different websites. Use escaped quotes when search
+for an exact search term: \". Be sure to enclose a query with double quotes it contains shell control
+characters like space, ';', '>', '|', etc.
 
 optional arguments:
   -h, --help        show this help message and exit
   -cat <category>   Choose from 1 or more categories (careers, cloud, code, edu, comm, docs, forms, social,
                     other), use ',' (comma) as delimiter. Defaults to all categories.
   -count <count>    How many websites checked per query. Google has a maximum length for queries.
-  -engine <engine>  Search with 'google', 'bing', 'yahoo' or 'yandex', defaults to 'google'.
+  -engine <engine>  Search with 'google', 'bing', 'duckduckgo' 'yahoo' or 'yandex', defaults to 'google'.
   -file <file>      Enter a custom website list.
   -query <query>    Enter a mandatory search term.
   -site <status>    Turn the 'site:' operator 'on' or 'off', or replace it with 'inurl' (only for Google),
                     defaults to 'on'.
   -excl <domains>   Excluded these domains from the search query.
+
 ```
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content using Google? Use the following command:
