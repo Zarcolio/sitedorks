@@ -26,7 +26,7 @@ control characters like space, ';', '>', '|', etc.
 optional arguments:
   -h, --help            show this help message and exit
   -cat <category>       Choose from 1 or more categories (careers, cloud, code, edu, comm, docs, forms,
-                        social, other), use ',' (comma) as delimiter. Defaults to all categories.
+                        social, shortner, other), use ',' (comma) as delimiter. Defaults to all categories.
   -count <count>        How many websites checked per query. Google has a maximum length for queries.
   -engine <engine>      Search with 'google', 'bing', 'duckduckgo' 'yahoo' or 'yandex', defaults to
                         'google'.
