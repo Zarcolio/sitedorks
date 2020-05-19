@@ -8,6 +8,7 @@ azurewebsites.net,cloud
 badoo.com,social
 bcwt.webex.com,comm
 bitbucket.org,code
+bit.ly,shortner
 blackboard.com,edu
 blogspot.com,social
 bluejeans.com,comm
@@ -58,6 +59,7 @@ ideone.com,code
 indeed.com,careers
 instagram.com,social
 invite.viber.com/?g2,comm
+is.gd,shortner
 join.skype.com/invite,comm
 join.slack.com/t,comm
 jotform.com,forms
@@ -107,6 +109,7 @@ taleo.net,careers
 teams.microsoft.com/l/meetup-join,comm
 t.me/joinchat,comm
 tiktok.com,social
+tinyurl.com,shortner
 trafficmanager.net,cloud
 travis-ci.com,code
 trello.com,other
@@ -129,6 +132,3 @@ ziladoc.com,docs
 zoho.com,cloud
 zonebourse.com,docs
 zoom.us/j,comm
-bit.ly,shortner
-is.gd,shortner
-tinyurl.com,shortner
