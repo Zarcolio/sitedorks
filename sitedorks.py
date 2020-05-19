@@ -7,7 +7,7 @@ import sys
 import os
 
 sArgParser=argparse.ArgumentParser(description="Use your favorite search engine to search for a search term with different websites. Use escaped quotes when search for an exact search term: \\\". Be sure to enclose a query with double quotes it contains shell control characters like space, ';', '>', '|', etc.")
-sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (careers, cloud, code, edu, comm, docs, forms, social, other), use \',\' (comma) as delimiter. Defaults to all categories.')
+sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (careers, cloud, code, edu, comm, docs, forms, social, shortner, other), use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
