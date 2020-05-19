@@ -6,16 +6,23 @@ import webbrowser
 import sys
 import os
 
-sArgParser=argparse.ArgumentParser(description='Search Google for a search term with different websites. Use escaped quotes when necessary: \\\"')
+sArgParser=argparse.ArgumentParser(description="Search Google for a search term with different websites. Use escaped quotes when search for an exact search term: \\\". Be sure to enclose a query with double quotes it contains shell control characters like space, ';', '>', '|', etc.")
 sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (careers, cloud, code, edu, comm, docs, forms, social, other), use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
-sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'google', 'yahoo', 'yandex'], default="google")
+sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.', required=True)
-sArgParser.add_argument('-site', metavar="<status>",help='Turn the \'site:\' operator \'on\' or \'off\', defaults to \'on\'.',default='on', choices=['on', 'off'])
+sArgParser.add_argument('-site', metavar="<status>",help='Turn the \'site:\' operator \'on\' or \'off\', or replace it with \'inurl\' (only for Google), defaults to \'on\'.',default='on', choices=['on', 'off', 'inurl'])
 sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded these domains from the search query.')
 
 aArguments=sArgParser.parse_args()
+
+if aArguments.site == "inurl" and aArguments.engine != "google":
+    print("inurl: only works with Google.")
+    print()
+    sArgParser.print_help()
+    sys.exit(2)
+
 
 if not aArguments.query:
     sQuery = ""
@@ -35,6 +42,9 @@ else:
 if aArguments.site == "on":
     sSite = "site:"
     sQuote = ""
+elif aArguments.site == "inurl":
+    sSite = "inurl:"
+    sQuote = ""
 else:
     sSite = ""
     sQuote = "%22"
@@ -46,9 +56,15 @@ if aArguments.excl:
     lExcludeDomains = aArguments.excl.split(",")
 
 if aArguments.engine == "google":
-    sQuery = "https://www.google.com/search?num=100&filter=0&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+    if aArguments.site == "inurl":
+        sInurl = "inurl:"
+    else:
+        sInurl = ""
+    sQuery = "https://www.google.com/search?num=100&filter=0&q=(" + sInurl + urllib.parse.quote(aArguments.query) + ")+AND+("
 elif aArguments.engine == "bing":
     sQuery = "https://www.bing.com/search?&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+elif aArguments.engine == "duckduckgo":
+    sQuery = "https://duckduckgo.com/?q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
 elif aArguments.engine == "yandex":
     sQuery = "https://yandex.com/search/?text=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
 elif aArguments.engine == "yahoo":
