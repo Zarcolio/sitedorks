@@ -1,5 +1,5 @@
 # About sitedorks
-Search Google, Bing, Yahoo or Yandex for a search term with different websites. A default list is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 147 dorkable websites is available.
+Search Google, Bing, Yahoo or Yandex for a search term with different websites. A default list is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 152 dorkable websites is available.
 
 # Why sitedorks?
 Why wouldn't you just enter dorks for several websites manually? Because:
@@ -38,8 +38,7 @@ optional arguments:
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
 
-Current categories in file are: analysis(3), careers(5), cloud(20), code(26), comm(17), docs(23), edu(1),
-forms(10), other(2), shortener(7), shortner(1), social(32)
+Current categories in file are: analysis(6), careers(6), cloud(20), code(26), comm(17), docs(23), edu(2), forms(10), other(2), shortener(7), shortner(1), social(32).
 ```
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content using Google? Use the following command:
