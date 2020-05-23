@@ -7,7 +7,8 @@ import sys
 import os
 
 sArgParser=argparse.ArgumentParser(description="Use your favorite search engine to search for a search term with different websites. Use escaped quotes when search for an exact search term: \\\". Be sure to enclose a query with double quotes it contains shell control characters like space, ';', '>', '|', etc.")
-sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (careers, cloud, code, edu, comm, docs, forms, social, shortener, other), use \',\' (comma) as delimiter. Defaults to all categories.')
+sArgParser.add_argument('-hh', '--hhelp', help='show this help message, print all categories and exit', action="store_true")
+sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories (use -h/--hhelp to see which categories are in the default list or in the provided list), use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
@@ -74,7 +75,27 @@ elif aArguments.engine == "yahoo":
 try:
     fInputFile = open(sInputFile, 'r')
     lInputFile = fInputFile.readlines()
-except:
+ 
+    if aArguments.hhelp:
+        dCatCounty = {}
+        for sLine in lInputFile:
+            sLine = sLine.strip()
+            lLine = sLine.split(",")
+            if lLine[1] in dCatCounty:
+                dCatCounty[lLine[1]] = dCatCounty[lLine[1]] + 1
+            else:
+                dCatCounty[lLine[1]] = 1
+        sCatList = ""
+        for iCounter, sCat in enumerate(sorted(dCatCounty)):
+            if iCounter == len(dCatCounty)-1:
+                sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + ")"
+            else:
+                sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + "), "
+            
+        
+        print(sCatList)
+        exit(0)
+except FileNotFoundError:
     print(sInputFile + " not found...")
     exit(2)
 
