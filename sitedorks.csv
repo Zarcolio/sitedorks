@@ -9,7 +9,7 @@ azurewebsites.net,cloud
 badoo.com,social
 bcwt.webex.com,comm
 bitbucket.org,code
-bit.ly,shortener
+bit.ly,shortner
 blackboard.com,edu
 blogspot.com,social
 bluejeans.com,comm
@@ -26,9 +26,9 @@ codecov.io,code
 codepad.org,code
 codepen.io,code
 cognitodocs.com,docs
-cookiepedia.co.uk,analysis
+cookiepedia.co.uk,analysiscar
 core.windows.net,cloud
-crunchbase.com,careers
+crunchbase.com,companies
 cutt.ly,shortener
 deviantart.com,social
 digitaloceanspaces.com,cloud
@@ -58,7 +58,7 @@ github.com,code
 github.io,code
 githubusercontent.com,code
 gitlab.com,code
-glassdoor.com,careers
+glassdoor.com,companies
 global.gotomeeting.com,comm
 googleapis.com,cloud
 googleusercontent.com,cloud
@@ -70,7 +70,7 @@ hunter.io,analysis
 hybrid-analysis.com,analysis
 ideone.com,code
 imgur.com,social
-indeed.com,careers
+indeed.com,companies
 instagram.com,social
 invite.viber.com/?g2,comm
 is.gd,shortener
@@ -81,7 +81,7 @@ jotform.com,forms
 jsbin.com,code
 jsfiddle.net,code
 jsonformatter.org,code
-linkedin.com,careers
+linkedin.com,companies
 linkedin.com,social
 m.me/join,comm
 markmail.org,comm
@@ -89,7 +89,7 @@ medium.com,social
 meet.google.com,comm
 meet.jit.si,comm
 meet.starleaf.com,comm
-monster.com,careers
+monster.com,companies
 mvnrepository.com,code
 myspace.com,social
 ow.ly,shortener
@@ -123,7 +123,7 @@ stackexchange.com,social
 subversion.assembla.com,code
 surveymonkey.com,forms
 sway.office.com,docs
-taleo.net,careers
+taleo.net,companies
 t.co,social
 t.co,shortener
 teams.microsoft.com/l/meetup-join,comm
