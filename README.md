@@ -38,7 +38,8 @@ optional arguments:
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
 
-Current categories in file are: analysis(6), careers(6), cloud(20), code(26), comm(17), docs(23), edu(2), forms(10), other(2), shortener(7), shortner(1), social(32).
+Current categories in file are: analysis(6), careers(6), cloud(20), code(26), comm(17), docs(23), edu(2),
+forms(10), other(2), shortener(7), shortner(1), social(32).
 ```
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content using Google? Use the following command:
