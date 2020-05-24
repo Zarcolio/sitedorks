@@ -79,7 +79,7 @@ try:
             
         sArgParser.print_help()
         print()
-        print("Current categories in file are: " + sCatList)
+        print("Current categories on file are: " + sCatList)
         print()
         exit(0)
     elif not aArguments.query:
