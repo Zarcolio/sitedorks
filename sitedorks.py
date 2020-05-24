@@ -12,7 +12,7 @@ sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or mor
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
-sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.', required=True)
+sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.')
 sArgParser.add_argument('-site', metavar="<on|off|inurl>",help='Turn the \'site:\' operator \'on\' or \'off\', or replace it with \'inurl:\' (only for Google), defaults to \'on\'.',default='on', choices=['on', 'off', 'inurl'])
 sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded these domains from the search query.')
 sArgParser.add_argument('-echo',  help='Prints the search query URLs, for further use like piping or bookmarking.', action="store_true")
@@ -34,7 +34,7 @@ else:
 if aArguments.count:
     iNewUrlAfter = int(aArguments.count)
 else:
-    iNewUrlAfter = 15
+    iNewUrlAfter = 14
 
 if aArguments.file:
     sInputFile = aArguments.file
@@ -56,17 +56,6 @@ if aArguments.cat:
 
 if aArguments.excl:
     lExcludeDomains = aArguments.excl.split(",")
-
-if aArguments.engine == "google":
-    sQuery = "https://www.google.com/search?num=100&filter=0&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
-elif aArguments.engine == "bing":
-    sQuery = "https://www.bing.com/search?&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
-elif aArguments.engine == "duckduckgo":
-    sQuery = "https://duckduckgo.com/?q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
-elif aArguments.engine == "yandex":
-    sQuery = "https://yandex.com/search/?text=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
-elif aArguments.engine == "yahoo":
-    sQuery = "https://search.yahoo.com/search?n=100&p=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
 
 try:
     fInputFile = open(sInputFile, 'r')
@@ -96,6 +85,19 @@ try:
 except FileNotFoundError:
     print(sInputFile + " not found...")
     exit(2)
+
+
+if aArguments.engine == "google":
+    sQuery = "https://www.google.com/search?num=100&filter=0&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+elif aArguments.engine == "bing":
+    sQuery = "https://www.bing.com/search?&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+elif aArguments.engine == "duckduckgo":
+    sQuery = "https://duckduckgo.com/?q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+elif aArguments.engine == "yandex":
+    sQuery = "https://yandex.com/search/?text=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+elif aArguments.engine == "yahoo":
+    sQuery = "https://search.yahoo.com/search?n=100&p=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+
 
 iFirst = 0
 iCount = 0
