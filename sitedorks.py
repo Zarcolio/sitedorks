@@ -82,6 +82,9 @@ try:
         print("Current categories in file are: " + sCatList)
         print()
         exit(0)
+    elif not aArguments.query:
+        print("sitedorks: error: the following argument is required: -query")
+        exit(2)
 except FileNotFoundError:
     print(sInputFile + " not found...")
     exit(2)
