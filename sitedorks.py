@@ -7,7 +7,7 @@ import sys
 import os
 
 sArgParser=argparse.ArgumentParser(add_help=False, description="Use your favorite search engine to search for a search term with different websites. Use escaped quotes when search for an exact search term: \\\". Be sure to enclose a query with double quotes it contains shell control characters like space, ';', '>', '|', etc.")
-sArgParser.add_argument('-h', '--help', help='Show this help message, print categories in file (add -file to check other CSV file) and exit.', action="store_true")
+sArgParser.add_argument('-h', '--help', help='Show this help message, print categories on file (add -file to check other CSV file) and exit.', action="store_true")
 sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories, use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
@@ -19,8 +19,8 @@ sArgParser.add_argument('-echo',  help='Prints the search query URLs, for furthe
 
 aArguments=sArgParser.parse_args()
 
-if aArguments.site == "inurl" and aArguments.engine != "google":
-    print("inurl: only works with Google.")
+if aArguments.site == "inurl" and aArguments.engine != "google" and aArguments.engine != "duckduckgo":
+    print("inurl: only works with Google and DuckDuckGo.")
     print()
     sArgParser.print_help()
     sys.exit(2)
@@ -58,11 +58,7 @@ if aArguments.excl:
     lExcludeDomains = aArguments.excl.split(",")
 
 if aArguments.engine == "google":
-    if aArguments.site == "inurl":
-        sInurl = "inurl:"
-    else:
-        sInurl = ""
-    sQuery = "https://www.google.com/search?num=100&filter=0&q=(" + sInurl + urllib.parse.quote(aArguments.query) + ")+AND+("
+    sQuery = "https://www.google.com/search?num=100&filter=0&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
 elif aArguments.engine == "bing":
     sQuery = "https://www.bing.com/search?&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
 elif aArguments.engine == "duckduckgo":
@@ -88,7 +84,7 @@ try:
         sCatList = ""
         for iCounter, sCat in enumerate(sorted(dCatCounty)):
             if iCounter == len(dCatCounty)-1:
-                sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + ")"
+                sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + ")."
             else:
                 sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + "), "
             
