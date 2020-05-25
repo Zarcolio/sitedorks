@@ -10,7 +10,7 @@ sArgParser=argparse.ArgumentParser(add_help=False, description="Use your favorit
 sArgParser.add_argument('-h', '--help', help='Show this help message, print categories on file (add -file to check other CSV file) and exit.', action="store_true")
 sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories, use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
-sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'bing\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
+sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'baidu\', \'bing\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'baidu', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.')
 sArgParser.add_argument('-site', metavar="<on|off|inurl>",help='Turn the \'site:\' operator \'on\' or \'off\', or replace it with \'inurl:\' (only for Google), defaults to \'on\'.',default='on', choices=['on', 'off', 'inurl'])
@@ -33,6 +33,9 @@ else:
 
 if aArguments.count:
     iNewUrlAfter = int(aArguments.count)
+    if aArguments.engine == "baidu":
+        print("Because of limitations with Baidu, -count is lowered to 2.")
+        iNewUrlAfter = 2
 else:
     iNewUrlAfter = 14
 
@@ -91,15 +94,17 @@ except FileNotFoundError:
 
 
 if aArguments.engine == "google":
-    sQuery = "https://www.google.com/search?num=100&filter=0&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+    sQuery = "https://www.google.com/search?num=100&filter=0&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
+elif aArguments.engine == "baidu":
+    sQuery = "https://www.baidu.com/s?wd=" + urllib.parse.quote(aArguments.query) + "+("
 elif aArguments.engine == "bing":
-    sQuery = "https://www.bing.com/search?&q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+    sQuery = "https://www.bing.com/search?&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "duckduckgo":
-    sQuery = "https://duckduckgo.com/?q=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+    sQuery = "https://duckduckgo.com/?q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "yandex":
-    sQuery = "https://yandex.com/search/?text=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+    sQuery = "https://yandex.com/search/?text=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "yahoo":
-    sQuery = "https://search.yahoo.com/search?n=100&p=(" + urllib.parse.quote(aArguments.query) + ")+AND+("
+    sQuery = "https://search.yahoo.com/search?n=100&p=" + urllib.parse.quote(aArguments.query) + "+AND+("
 
 
 iFirst = 0
