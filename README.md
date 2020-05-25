@@ -16,21 +16,21 @@ Sitedork should be able to run with a default Kali Linux installation without in
 
 # Usage
 ```
-usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] -query
-                 <query> [-site <on|off|inurl>] [-excl <domains>] [-echo]
+usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-query <query>]
+                 [-site <on|off|inurl>] [-excl <domains>] [-echo]
 
 Use your favorite search engine to search for a search term with different websites. Use escaped quotes
-when search for an exact search term: \". Be sure to enclose a query with double quotes it contains
-shell control characters like space, ';', '>', '|', etc.
+when search for an exact search term: \". Be sure to enclose a query with double quotes it contains shell
+control characters like space, ';', '>', '|', etc.
 
 optional arguments:
-  -h, --help            Show this help message, print categories in file (add -file to check other CSV
+  -h, --help            Show this help message, print categories on file (add -file to check other CSV
                         file) and exit.
   -cat <category>       Choose from 1 or more categories, use ',' (comma) as delimiter. Defaults to all
                         categories.
   -count <count>        How many websites checked per query. Google has a maximum length for queries.
-  -engine <engine>      Search with 'google', 'bing', 'duckduckgo' 'yahoo' or 'yandex', defaults to
-                        'google'.
+  -engine <engine>      Search with 'google', 'baidu', 'bing', 'duckduckgo' 'yahoo' or 'yandex', defaults
+                        to 'google'.
   -file <file>          Enter a custom website list.
   -query <query>        Enter a mandatory search term.
   -site <on|off|inurl>  Turn the 'site:' operator 'on' or 'off', or replace it with 'inurl:' (only for
@@ -38,8 +38,9 @@ optional arguments:
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
 
-Current categories in file are: analysis(8), cloud(23), code(29), comm(17), companies(6), docs(23), edu(2),
+Current categories on file are: analysis(8), cloud(23), code(29), comm(17), companies(6), docs(23), edu(2),
 forms(10), other(2), shortener(8), social(33).
+
 ```
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content using Google? Use the following command:
