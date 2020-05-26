@@ -4,7 +4,7 @@ academia.edu,docs
 amazonaws.com,cloud
 app.any.run,analysis
 apps.apple.com,code
-apollo.io,companies
+apollo.io,orgs
 arxiv.org,docs
 azure-api.net,cloud
 azureedge.net,cloud
@@ -32,7 +32,7 @@ cognitodocs.com,docs
 cookiepedia.co.uk,analysis
 core.ac.uk,docs
 core.windows.net,cloud
-crunchbase.com,companies
+crunchbase.com,orgs
 cutt.ly,shortener
 deviantart.com,social
 devhub.io,code
@@ -66,7 +66,7 @@ github.com,code
 github.io,code
 githubusercontent.com,code
 gitlab.com,code
-glassdoor.com,companies
+glassdoor.com,orgs
 global.gotomeeting.com,comm
 googleapis.com,cloud
 googleusercontent.com,cloud
@@ -78,7 +78,7 @@ hunter.io,analysis
 hybrid-analysis.com,analysis
 ideone.com,code
 imgur.com,social
-indeed.com,companies
+indeed.com,orgs
 instagram.com,social
 invite.viber.com/?g2,comm
 is.gd,shortener
@@ -89,7 +89,7 @@ jotform.com,forms
 jsbin.com,code
 jsfiddle.net,code
 jsonformatter.org,code
-linkedin.com,companies
+linkedin.com,orgs
 linkedin.com,social
 m.me/join,comm
 markmail.org,comm
@@ -97,7 +97,7 @@ medium.com,social
 meet.google.com,comm
 meet.jit.si,comm
 meet.starleaf.com,comm
-monster.com,companies
+monster.com,orgs
 mvnrepository.com,code
 myspace.com,social
 onedrive.live.com,cloud
@@ -135,7 +135,7 @@ stackexchange.com,social
 subversion.assembla.com,code
 surveymonkey.com,forms
 sway.office.com,docs
-taleo.net,companies
+taleo.net,orgs
 t.co,social
 t.co,shortener
 teams.microsoft.com/l/meetup-join,comm
@@ -157,7 +157,7 @@ viber.com,social
 vimeo.com,social
 voovmeeting.com/s,comm
 webflow.com,cloud
-wikileaks.org,companies
+wikileaks.org,orgs
 wordpress.com,social
 wufoo.com,cloud
 youtube.com,social
