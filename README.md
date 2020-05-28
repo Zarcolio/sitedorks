@@ -19,9 +19,9 @@ Sitedork should be able to run with a default Kali Linux installation without in
 usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-query <query>]
                  [-site <on|off|inurl>] [-excl <domains>] [-echo]
 
-Use your favorite search engine to search for a search term with different websites. When searching for an exact
-search term with double quotes, enclose them with single quotes. Be sure to enclose a query with quotes if it 
-contains shell control characters like space or ;,><| etc.
+Use your favorite search engine to search for a search term with different websites. When searching for an
+exact search term with double quotes, enclose them with single quotes. Be sure to enclose a query with quotes
+if it contains shell control characters like space or ;,><| etc.
 
 optional arguments:
   -h, --help            Show this help message, print categories on file (add -file to check other CSV
@@ -38,8 +38,8 @@ optional arguments:
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
 
-Current categories on file are: analysis(8), cloud(23), code(29), comm(17), docs(25), edu(2), forms(10),
-orgs(7), other(2), shortener(8), social(33).
+Current categories on file are: analysis(8), cloud(23), code(29), comm(17), companies(6), docs(23), edu(2), forms(10),
+other(2), shortener(8), social(33).
 
 ```
 # Examples
