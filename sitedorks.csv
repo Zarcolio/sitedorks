@@ -50,6 +50,7 @@ dropbox.com/s,cloud
 ecitydoc.com,docs
 edgekey.net,cloud
 edgesuite.net,cloud
+evernote.com/shard,docs
 emaze.com,docs
 facebook.com,social
 firebaseio.com,cloud
@@ -68,6 +69,8 @@ githubusercontent.com,code
 gitlab.com,code
 glassdoor.com,orgs
 global.gotomeeting.com,comm
+go.teamviewer.com,remote
+google.com/calendar/embed,comm
 googleapis.com,cloud
 googleusercontent.com,cloud
 haikudeck.com,docs
@@ -76,6 +79,7 @@ hub.docker.com,code
 hubspot.net,cloud
 hunter.io,analysis
 hybrid-analysis.com,analysis
+icloud.com,docs
 ideone.com,code
 ieeexplore.ieee.org,docs
 imgur.com,social
@@ -140,7 +144,7 @@ sway.office.com,docs
 taleo.net,orgs
 t.co,social
 t.co,shortener
-teams.microsoft.com/l/meetup-join,comm
+teams.microsoft.com,comm
 t.me/joinchat,comm
 tiktok.com,social
 tinyurl.com,shortener
