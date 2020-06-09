@@ -37,8 +37,8 @@ optional arguments:
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
 
-Current categories on file are: analysis(8), cloud(28), code(31), comm(22), companies(8), docs(24), edu(2),
-forms(11), other(2), shortener(12), social(35).
+Current categories on file are: analysis(8), cloud(28), code(32), comm(25), companies(2), docs(30), edu(2),
+forms(11), orgs(8), other(2), remote(1), shortener(12), social(38).
 
 ```
 # Examples
