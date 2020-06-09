@@ -8,7 +8,7 @@ Why wouldn't you just enter dorks for several websites manually? Because:
 * Adding new websites to your search query can be arranged by just adding them to an input file.
 * It already has a lot of dorkable websites included.
 * The list with dorkable websites is updated regularly.
-* Some search engines ignore too many keywords/characters in a query and with argument -c it's easy to split your dork into more queries.
+* Some search engines ignore too many keywords/characters in a query and with argument -count it's easy to split your dork into more queries.
 
 # Install
 Sitedork should be able to run with a default Kali Linux installation without installing additional Python packages. If you're running into trouble running sitedorks, please drop me an issue and I'll try to fix it :)
