@@ -71,7 +71,9 @@ formlets.com,forms
 forms.office.com,forms
 formsite.com,forms
 formstack.com/forms,forms
+forrester.com,orgs
 foursquare.com,social
+gartner.com,orgs
 github.com,code
 github.io,code
 githubusercontent.com,code
@@ -113,7 +115,9 @@ keybase.io,comm
 linkedin.com,social
 list-manage.com,comm
 lnkd.in,shortener 
+maps.google.com,orgs
 m.me/join,comm
+mailchi.mp,comm
 markmail.org,comm
 medium.com,social
 meet.google.com,comm
