@@ -15,9 +15,6 @@ Sitedork should be able to run with a default Kali Linux installation without in
 
 # Usage
 ```
-usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-query <query>]
-                 [-site <on|off|inurl>] [-excl <domains>] [-echo]
-
 Use your favorite search engine to search for a search term with different websites. Use single quotes around a query with double quotes. Be sure to enclose a query with single quotes it contains shell control characters like space or ';', '>', '|', etc.
 
 optional arguments:
@@ -35,8 +32,10 @@ optional arguments:
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
 
-Current categories on file are: analysis(8), cloud(29), code(32), comm(24), companies(2), docs(30), edu(2),
-forms(11), orgs(7), other(2), remote(1), shortener(12), social(37), storage(3).```
+usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-query <query>]
+                 [-site <on|off|inurl>] [-excl <domains>] [-echo]
+```
+
 # Examples
 Want to look for "uber.com" with different sites containing all kinds of content using Google? Use the following command:
 ```
