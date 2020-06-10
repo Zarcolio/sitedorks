@@ -15,6 +15,9 @@ Sitedork should be able to run with a default Kali Linux installation without in
 
 # Usage
 ```
+usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-query <query>]
+[-site <on|off|inurl>] [-excl <domains>] [-echo]
+
 Use your favorite search engine to search for a search term with different websites. Use single quotes around
 a query with double quotes. Be sure to enclose a query with single quotes it contains shell control characters
 like space or ';', '>', '|', etc.
