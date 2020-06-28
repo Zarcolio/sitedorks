@@ -55,7 +55,7 @@ Want to search for communication invites with yandex but leave site: out of the 
 ```
 sitedorks -cat comm -site disable -engine yandex -query uber
 ```
-And if you  want to see which categories are on file, for example with the [HackerOne](https://www.hackerone.com) platform:
+And if you  want to see which categories are on file, for example with the [hackerone](https://www.hackerone.com) platform:
 ```
 sitedorks -file sitedorks-hackerone.csv -cats
 ```
