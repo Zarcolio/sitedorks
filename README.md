@@ -55,5 +55,9 @@ Want to search for communication invites with yandex but leave site: out of the 
 ```
 sitedorks -cat comm -site disable -engine yandex -query uber
 ```
+And if you  want to see which categories are on file, for example with the [HackerOne](https://www.hackerone.com) platform:
+```
+sitedorks -file sitedorks-hackerone.csv -cats
+```
 # Contribute?
 Do you have some usefull additions to the script or to the list of dorkable websites, please send in a pull request to help make this script better :)
