@@ -9,7 +9,7 @@ Why wouldn't you just enter dorks for several websites manually? Because:
 * It already has a lot of dorkable websites included.
 * The list with dorkable websites is updated regularly.
 * Some search engines ignore too many keywords/characters in a query and with argument -count it's easy to split your dork into more queries.
-* It contains a list for Bugcrowd. With 1 command you can search all domains of programs on Bugrowd :)
+* It contains a list for Bugcrowd. With 1 command you can search domains of programs on several bug bounty platform :)
 
 # Install
 Sitedork should be able to run with a default Kali Linux installation without installing additional Python packages. If you're running into trouble running sitedorks, please drop me an issue and I'll try to fix it :)
