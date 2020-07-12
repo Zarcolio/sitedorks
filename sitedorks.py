@@ -6,10 +6,29 @@ import webbrowser
 import sys
 import os
 
-sArgParser=argparse.ArgumentParser(add_help=False, description="Use your favorite search engine to search for a search term with different websites. Use escaped quotes when search for an exact search term: \\\". Be sure to enclose a query with double quotes it contains shell control characters like space, ';', '>', '|', etc.")
+def GetCat():
+    dCatCounty = {}
+    for sLine in lInputFile:
+        sLine = sLine.strip()
+        lLine = sLine.split(",")
+        if lLine[1] in dCatCounty:
+            dCatCounty[lLine[1]] = dCatCounty[lLine[1]] + 1
+        else:
+            dCatCounty[lLine[1]] = 1
+    sCatList = ""
+    for iCounter, sCat in enumerate(sorted(dCatCounty)):
+        if iCounter == len(dCatCounty)-1:
+            sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + ")."
+        else:
+            sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + "), "
+            
+    return sCatList
+
+sArgParser=argparse.ArgumentParser(add_help=False, description="Use your favorite search engine to search for a search term with different websites. Use single quotes around a query with double quotes. Be sure to enclose a query with single quotes it contains shell control characters like space, ';', '>', '|', etc.")
 sArgParser.add_argument('-h', '--help', help='Show this help message, print categories on file (add -file to check other CSV file) and exit.', action="store_true")
 sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories, use \',\' (comma) as delimiter. Defaults to all categories.')
-sArgParser.add_argument('-count', metavar="<count>", help='How many websites checked per query. Google has a maximum length for queries.')
+sArgParser.add_argument('-cats', help='Show all categories on file, use with or without -file.', action="store_true")
+sArgParser.add_argument('-count', metavar="<count>", help='How many websites are searched per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'baidu\', \'bing\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'baidu', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.')
@@ -64,22 +83,15 @@ try:
     fInputFile = open(sInputFile, 'r')
     lInputFile = fInputFile.readlines()
  
+    if aArguments.cats:
+        sCatList = GetCat()
+        print()
+        print("Current categories on file are: " + sCatList)
+        print()
+        exit(0)
+        
     if aArguments.help:
-        dCatCounty = {}
-        for sLine in lInputFile:
-            sLine = sLine.strip()
-            lLine = sLine.split(",")
-            if lLine[1] in dCatCounty:
-                dCatCounty[lLine[1]] = dCatCounty[lLine[1]] + 1
-            else:
-                dCatCounty[lLine[1]] = 1
-        sCatList = ""
-        for iCounter, sCat in enumerate(sorted(dCatCounty)):
-            if iCounter == len(dCatCounty)-1:
-                sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + ")."
-            else:
-                sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + "), "
-            
+        sCatList = GetCat()
         sArgParser.print_help()
         print()
         print("Current categories on file are: " + sCatList)
