@@ -29,7 +29,7 @@ sArgParser.add_argument('-h', '--help', help='Show this help message, print cate
 sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories, use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-cats', help='Show all categories on file, use with or without -file.', action="store_true")
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites are searched per query. Google has a maximum length for queries.')
-sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'baidu\', \'bing\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'baidu', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
+sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'baidu\', \'bing\', \'bing-ecosia\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'bing-ecosia', 'baidu', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.')
 sArgParser.add_argument('-site', metavar="<on|off|inurl>",help='Turn the \'site:\' operator \'on\' or \'off\', or replace it with \'inurl:\' (only for Google), defaults to \'on\'.',default='on', choices=['on', 'off', 'inurl'])
@@ -110,7 +110,9 @@ if aArguments.engine == "google":
 elif aArguments.engine == "baidu":
     sQuery = "https://www.baidu.com/s?wd=" + urllib.parse.quote(aArguments.query) + "+("
 elif aArguments.engine == "bing":
-    sQuery = "https://www.bing.com/search?&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
+    sQuery = "https://www.bing.com/search?&count=100&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
+elif aArguments.engine == "bing-ecosia":
+    sQuery = "https://www.ecosia.org/search?&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "duckduckgo":
     sQuery = "https://duckduckgo.com/?q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "yandex":
