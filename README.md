@@ -28,7 +28,12 @@ Why wouldn't you just enter dorks for several websites manually? Because:
 * It contains a list for Bugcrowd, HackerOne, Intigrity and YesWeHack. With 1 command you can search domains of programs on several bug bounty platforms :)
 
 # Install
-Sitedorks should be able to run with a default Kali Linux installation without installing additional Python packages. If you're running into trouble running sitedorks, please drop me an issue and I'll try to fix it :)
+Sitedorks should be able to run with a default Kali Linux installation without installing additional Python packages.
+Just run:
+```
+git clone https://github.com/Zarcolio/sitedorks
+```
+If you're running into trouble running sitedorks, please drop me an issue and I'll try to fix it :)
 
 # Usage
 ```
