@@ -50,12 +50,12 @@ optional arguments:
   -cat <category>       Choose from 1 or more categories, use ',' (comma) as delimiter. Defaults to all categories.
   -cats                 Show all categories on file, use with or without -file.
   -count <count>        How many websites are searched per query. Google has a maximum length for queries.
-  -engine <engine>      Search with 'google', 'baidu', 'bing', 'bing-ecosia', 'duckduckgo' 'yahoo' or 'yandex',
-                        defaults to 'google'.
+  -engine <engine>      Search with 'google', 'baidu', 'bing', 'bing-ecosia', 'duckduckgo' 'yahoo' or 'yandex', defaults to 
+                        'google'.
   -file <file>          Enter a custom website list.
   -query <query>        Enter a mandatory search term.
-  -site <on|off|inurl>  Turn the 'site:' operator 'on' or 'off', or replace it with 'inurl:' (only for Google), 
-                        defaults to 'on'.
+  -site <on|off|inurl>  Turn the 'site:' operator 'on' or 'off', or replace it with 'inurl:' (only for Google), defaults to 
+                        'on'.
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
 ```
