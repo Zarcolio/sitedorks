@@ -1,5 +1,5 @@
 # About sitedorks
-Search Google, Bing, Yahoo or Yandex for a search term with different websites. A default list is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 241 dorkable websites is available.
+Search Google, Bing, Yahoo or Yandex for a search term with several websites. A default list is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 241 dorkable websites is available.
 Current categories on file are: 
 * analysis(10)
 * cloud(35)
