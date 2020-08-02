@@ -46,8 +46,7 @@ query with double quotes. Be sure to enclose a query with single quotes it conta
 space, ';', '>', '|', etc.
 
 optional arguments:
-  -h, --help            Show this help message, print categories on file (add -file to check other CSV file) and
-                        exit.
+  -h, --help            Show this help message, print categories on file (add -file to check other CSV file) and exit.
   -cat <category>       Choose from 1 or more categories, use ',' (comma) as delimiter. Defaults to all categories.
   -cats                 Show all categories on file, use with or without -file.
   -count <count>        How many websites are searched per query. Google has a maximum length for queries.
