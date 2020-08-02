@@ -32,6 +32,7 @@ Sitedorks should be able to run with a default Kali Linux installation without i
 Just run:
 ```
 git clone https://github.com/Zarcolio/sitedorks
+bash sitedorks/install.sh
 ```
 If you're running into trouble running sitedorks, please drop me an issue and I'll try to fix it :)
 
