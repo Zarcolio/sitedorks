@@ -38,30 +38,27 @@ If you're running into trouble running sitedorks, please drop me an issue and I'
 
 # Usage
 ```
-usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-query <query>]
-[-site <on|off|inurl>] [-excl <domains>] [-echo]
+usage: sitedorks [-h] [-cat <category>] [-cats] [-count <count>] [-engine <engine>] [-file <file>]
+[-query <query>] [-site <on|off|inurl>] [-excl <domains>] [-echo]
 
-Use your favorite search engine to search for a search term with different websites. Use single quotes around
-a query with double quotes. Be sure to enclose a query with single quotes it contains shell control characters
-like space or ';', '>', '|', etc.
+Use your favorite search engine to search for a search term with different websites. Use single quotes around a
+query with double quotes. Be sure to enclose a query with single quotes it contains shell control characters like
+space, ';', '>', '|', etc.
 
 optional arguments:
-  -h, --help            Show this help message, print categories on file (add -file to check other CSV
-                        file) and exit.
-  -cat <category>       Choose from 1 or more categories, use ',' (comma) as delimiter. Defaults to all
-                        categories.
-  -count <count>        How many websites checked per query. Google has a maximum length for queries.
-  -engine <engine>      Search with 'google', 'baidu', 'bing', 'duckduckgo' 'yahoo' or 'yandex', defaults
-                        to 'google'.
+  -h, --help            Show this help message, print categories on file (add -file to check other CSV file) and
+                        exit.
+  -cat <category>       Choose from 1 or more categories, use ',' (comma) as delimiter. Defaults to all categories.
+  -cats                 Show all categories on file, use with or without -file.
+  -count <count>        How many websites are searched per query. Google has a maximum length for queries.
+  -engine <engine>      Search with 'google', 'baidu', 'bing', 'bing-ecosia', 'duckduckgo' 'yahoo' or 'yandex',
+                        defaults to 'google'.
   -file <file>          Enter a custom website list.
   -query <query>        Enter a mandatory search term.
-  -site <on|off|inurl>  Turn the 'site:' operator 'on' or 'off', or replace it with 'inurl:' (only for
-                        Google), defaults to 'on'.
+  -site <on|off|inurl>  Turn the 'site:' operator 'on' or 'off', or replace it with 'inurl:' (only for Google), 
+                        defaults to 'on'.
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
-
-usage: sitedorks [-h] [-cat <category>] [-count <count>] [-engine <engine>] [-file <file>] [-query <query>]
-                 [-site <on|off|inurl>] [-excl <domains>] [-echo]
 ```
 
 # Examples
