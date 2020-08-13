@@ -12,7 +12,7 @@ Current categories on file are:
 * orgs(13)
 * other(4)
 * remote(1)
-* shortener(15)
+* shortener(16)
 * social(42)
 * storage(3)
 
