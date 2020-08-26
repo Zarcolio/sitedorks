@@ -59,7 +59,7 @@ optional arguments:
                         'on'.
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
-  -ubb                  Updates bug bounty file and exits. Needs bbrecon by serain.
+  -ubb                  Updates bug bounty file and exits. Uses bbrecon.
 ```
 
 # Examples
