@@ -59,6 +59,7 @@ optional arguments:
                         'on'.
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
+  -ubb                  Updates bug bounty file and exits. Needs bbrecon by serain.
 ```
 
 # Examples
@@ -76,7 +77,12 @@ sitedorks -cat comm -site disable -engine yandex -query uber
 ```
 And if you  want to see which categories are on file, for example with the [hackerone](https://www.hackerone.com) platform:
 ```
-sitedorks -file sitedorks-hackerone.csv -cats
+sitedorks -file sitedorks-bbrecon.csv -cats
 ```
+If you want to download/update the bug bounty file, you can use the -ubb parameter (it uses [bbrecon](https://github.com/serain/bbrecon)):
+```
+sitedorks -ubb
+```
+
 # Contribute?
 Do you have some usefull additions to the script or to the list of dorkable websites, please send in a pull request to help make this script better or contact me @ [Twitter](https://twitter.com/zarcolio) :)
