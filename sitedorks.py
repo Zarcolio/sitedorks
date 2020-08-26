@@ -35,8 +35,39 @@ sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory se
 sArgParser.add_argument('-site', metavar="<on|off|inurl>",help='Turn the \'site:\' operator \'on\' or \'off\', or replace it with \'inurl:\' (only for Google), defaults to \'on\'.',default='on', choices=['on', 'off', 'inurl'])
 sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded these domains from the search query.')
 sArgParser.add_argument('-echo',  help='Prints the search query URLs, for further use like piping or bookmarking.', action="store_true")
+sArgParser.add_argument('-ubb',  help='Updates bug bounty file and exits. Needs bbrecon by serain.', action="store_true")
 
 aArguments=sArgParser.parse_args()
+
+if aArguments.ubb:
+    import subprocess
+    import json
+    from tldextract import extract
+    
+    sOutput = subprocess.check_output("cat /etc/services", shell=True)
+    sOutput = subprocess.check_output("bbrecon get scopes --type web --output json", shell=True)
+    OutputJson = json.loads(sOutput)
+    dDomains = {}
+    for sLine in OutputJson:
+        
+        if sLine["value"].endswith("amazonaws.com"):
+            sDomain = sLine["value"]
+        else:
+            dl3, dl2, dl1 = extract(sLine["value"])
+            sDomain = dl2 + "." + dl1
+        
+        if " " in sDomain or sDomain.endswith(".") or sDomain.endswith(".onion"):
+            continue
+        else:
+            dDomains[sDomain] = sLine["slug"]
+
+    fCsv = open(os.path.dirname(os.path.realpath(sys.argv[0])) + "/sitedorks-bbrecon.csv", 'w', buffering=1)
+    
+    for sLine in dDomains:
+        fCsv.write(sLine +","+ dDomains[sLine] +"\n")
+
+    exit()
+
 
 if aArguments.site == "inurl" and aArguments.engine != "google" and aArguments.engine != "duckduckgo":
     print("inurl: only works with Google and DuckDuckGo.")
