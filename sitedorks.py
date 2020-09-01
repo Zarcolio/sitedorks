@@ -35,7 +35,7 @@ sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory se
 sArgParser.add_argument('-site', metavar="<on|off|inurl>",help='Turn the \'site:\' operator \'on\' or \'off\', or replace it with \'inurl:\' (only for Google), defaults to \'on\'.',default='on', choices=['on', 'off', 'inurl'])
 sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded these domains from the search query.')
 sArgParser.add_argument('-echo',  help='Prints the search query URLs, for further use like piping or bookmarking.', action="store_true")
-sArgParser.add_argument('-ubb',  help='Updates bug bounty file and exits. Needs bbrecon by serain.', action="store_true")
+sArgParser.add_argument('-ubb',  help='Updates bug bounty file and exits. Uses bbrecon.', action="store_true")
 
 aArguments=sArgParser.parse_args()
 
@@ -44,28 +44,57 @@ if aArguments.ubb:
     import json
     from tldextract import extract
     
-    sOutput = subprocess.check_output("cat /etc/services", shell=True)
-    sOutput = subprocess.check_output("bbrecon get scopes --type web --output json", shell=True)
+    #sOutput = subprocess.check_output("bbrecon get scopes --type web --output json", shell=True)
+    sOutput = subprocess.check_output("bbrecon get programs --type web -o json", shell=True)
+    fCsvInScope = open(os.path.dirname(os.path.realpath(sys.argv[0])) + "/sitedorks-bbrecon-inscope.csv", 'w', buffering=1)
+    fCsvOutScope = open(os.path.dirname(os.path.realpath(sys.argv[0])) + "/sitedorks-bbrecon-outscope.csv", 'w', buffering=1)
+
     OutputJson = json.loads(sOutput)
-    dDomains = {}
+    dDomainsInScope = {}
+    dDomainsOutScope = {}
     for sLine in OutputJson:
-        
-        if sLine["value"].endswith("amazonaws.com"):
-            sDomain = sLine["value"]
-        else:
-            dl3, dl2, dl1 = extract(sLine["value"])
-            sDomain = dl2 + "." + dl1
-        
-        if " " in sDomain or sDomain.endswith(".") or sDomain.endswith(".onion"):
-            continue
-        else:
-            dDomains[sDomain] = sLine["slug"]
-
-    fCsv = open(os.path.dirname(os.path.realpath(sys.argv[0])) + "/sitedorks-bbrecon.csv", 'w', buffering=1)
+        sLine["slug"] = sLine["slug"].lower()
+        #print(sLine["in_scope"])
+        #print(sLine["out_scope"])
+        #print()
+        for sInScope in sLine["in_scope"]:
+            if sInScope["type"] == "web":
+                lInScopeValues = sInScope["value"].lower().split(",")
+                for sInScopeValue in lInScopeValues:
+                    if sInScopeValue.endswith("amazonaws.com") or sInScopeValue.endswith("cloudfront.net") or sInScopeValue.endswith("azurefd.net") or sInScopeValue.endswith("azurewebsites.net"):
+                        sDomain = sInScopeValue
+                    else:
+                        dl3, dl2, dl1 = extract(sInScopeValue)
+                        sDomain = dl2 + "." + dl1
     
-    for sLine in dDomains:
-        fCsv.write(sLine +","+ dDomains[sLine] +"\n")
+                    if " " in sDomain or "*" in sDomain or sDomain.endswith(".") or sDomain.endswith(".onion"):
+                        continue
+                    else:
+                        dDomainsInScope[sDomain] = sLine["slug"]
 
+        for sOutScope in sLine["out_scope"]:
+            if sOutScope["type"] == "web":
+                lOutScopeValues = sOutScope["value"].lower().split(",")
+                for sOutScopeValue in lOutScopeValues:
+                    if sOutScopeValue.endswith("amazonaws.com") or sOutScopeValue.endswith("cloudfront.net") or sOutScopeValue.endswith("azurefd.net") or sOutScopeValue.endswith("azurewebsites.net"):
+                        sDomain = sOutScopeValue
+                    else:
+                        dl3, dl2, dl1 = extract(sOutScopeValue)
+                        sDomain = dl2 + "." + dl1
+    
+                    if " " in sDomain or "*" in sDomain or sDomain.endswith(".") or sDomain.endswith(".onion"):
+                        continue
+                    else:
+                        if not sDomain in dDomainsInScope:
+                            dDomainsOutScope[sDomain] = sLine["slug"]
+
+    
+    for sLine in dDomainsInScope:
+        fCsvInScope.write(sLine +","+ dDomainsInScope[sLine] +"\n")
+
+    for sLine in dDomainsOutScope:
+        fCsvOutScope.write(sLine +","+ dDomainsOutScope[sLine] +"\n")
+    print("sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv have been updated.")
     exit()
 
 
