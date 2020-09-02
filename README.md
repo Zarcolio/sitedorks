@@ -59,7 +59,7 @@ optional arguments:
                         'on'.
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
-  -ubb                  Updates bug bounty file and exits. Uses bbrecon.
+  -ubb                  Updates bug bounty files and exits. Uses bbrecon.
 ```
 
 # Examples
@@ -79,9 +79,18 @@ And if you  want to see which categories are on file, for example with the [hack
 ```
 sitedorks -file sitedorks-bbrecon.csv -cats
 ```
-If you want to download/update the bug bounty file, you can use the -ubb parameter (it uses [bbrecon](https://github.com/serain/bbrecon)):
+If you want to download/update the bug bounty files, you can use the -ubb parameter (it uses [bbrecon](https://github.com/serain/bbrecon)):
 ```
 sitedorks -ubb
+```
+This argument creates two files: sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv.
+Use this command for finding exploitable systems or juicy info (always check if a system is in scope, because although these these domains are in scope, it doesn't always mean that this subdomain or system is):
+```
+sitedorks -file sitedorks-bbrecon-inscope.csv -cat somevdp -query "search engine query"
+```
+Use this command for finding juicy info only, because these domains are out of scope:
+```
+sitedorks -file sitedorks-bbrecon-outscope.csv -cat somevdp -query "search engine query"
 ```
 
 # Contribute?
