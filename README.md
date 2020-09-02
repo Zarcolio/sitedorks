@@ -83,8 +83,8 @@ If you want to download/update the bug bounty files, you can use the -ubb parame
 ```
 sitedorks -ubb
 ```
-This argument creates two files: sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv.
-Use this command for finding exploitable systems or juicy info (always check if a system is in scope, because although these these domains are in scope, it doesn't always mean that this subdomain or system is):
+The -ubb argument creates two files: sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv.
+Use the following command for finding exploitable systems or juicy info (always check if a system is in scope, although these these domains are in scope, it doesn't always mean that this subdomain or system is):
 ```
 sitedorks -file sitedorks-bbrecon-inscope.csv -cat somevdp -query "search engine query"
 ```
