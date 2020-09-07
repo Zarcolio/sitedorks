@@ -89,13 +89,26 @@ if aArguments.ubb:
                         if not sDomain in dDomainsInScope:
                             dDomainsOutScope[sDomain] = sLine["slug"]
 
-    
+    bFailed = False
     for sLine in dDomainsInScope:
-        fCsvInScope.write(sLine +","+ dDomainsInScope[sLine] +"\n")
+        try:
+            fCsvInScope.write(sLine +","+ dDomainsInScope[sLine] +"\n")
+        except:
+            bFailed = True
+            continue
 
     for sLine in dDomainsOutScope:
-        fCsvOutScope.write(sLine +","+ dDomainsOutScope[sLine] +"\n")
-    print("sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv have been updated.")
+        try:
+            fCsvOutScope.write(sLine +","+ dDomainsOutScope[sLine] +"\n")
+        except:
+            bFailed = True
+            continue
+
+    if not bFailed:
+        print("sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv have been updated.")
+    else:
+        print("Something went wrong while writing the files.")
+        
     exit()
 
 sAnswer=""
