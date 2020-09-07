@@ -112,10 +112,10 @@ if aArguments.ubb:
     exit()
 
 sAnswer=""
-if not aArguments.cat:
+if not aArguments.cat and aArguments.query and not aArguments.help:
     while sAnswer.lower() != "y" and sAnswer.lower() != "n":
-        sAnswer = input("Not providing -cat will open a lot of tabs/windows in your browser. Do you want to continue? (y/n) ")
-    
+        sAnswer = input("Not providing -cat will open a whole lot of tabs/windows in your browser. Do you want to continue? (y/n) ")
+
     if sAnswer.lower() == "n":
         exit()
 
