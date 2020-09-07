@@ -35,10 +35,11 @@ sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory se
 sArgParser.add_argument('-site', metavar="<on|off|inurl>",help='Turn the \'site:\' operator \'on\' or \'off\', or replace it with \'inurl:\' (only for Google), defaults to \'on\'.',default='on', choices=['on', 'off', 'inurl'])
 sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded these domains from the search query.')
 sArgParser.add_argument('-echo',  help='Prints the search query URLs, for further use like piping or bookmarking.', action="store_true")
-sArgParser.add_argument('-ubb',  help='Updates bug bounty file and exits. Uses bbrecon.', action="store_true")
+sArgParser.add_argument('-ubb',  help='Updates bug bounty files (in en out scope) and exits. Uses bbrecon.', action="store_true")
 
 aArguments=sArgParser.parse_args()
 
+   
 if aArguments.ubb:
     import subprocess
     import json
@@ -96,6 +97,14 @@ if aArguments.ubb:
         fCsvOutScope.write(sLine +","+ dDomainsOutScope[sLine] +"\n")
     print("sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv have been updated.")
     exit()
+
+sAnswer=""
+if not aArguments.cat:
+    while sAnswer.lower() != "y" and sAnswer.lower() != "n":
+        sAnswer = input("Not providing -cat will open a lot of tabs/windows in your browser. Do you want to continue? (y/n) ")
+    
+    if sAnswer.lower() == "n":
+        exit()
 
 
 if aArguments.site == "inurl" and aArguments.engine != "google" and aArguments.engine != "duckduckgo":
