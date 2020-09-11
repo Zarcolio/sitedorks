@@ -1,5 +1,5 @@
 # About sitedorks
-Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several websites. A default list is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 253 dorkable websites is available.
+Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several websites. A default list is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 254 dorkable websites is available.
 By default, these categories are on file: 
 * analysis(10)
 * cloud(36)
@@ -13,7 +13,7 @@ By default, these categories are on file:
 * other(4)
 * remote(1)
 * shortener(18)
-* social(46)
+* social(47)
 * storage(3)
 
 # Why sitedorks?
@@ -25,7 +25,7 @@ Why wouldn't you just enter dorks for several websites manually? Because:
 * It already has a lot of dorkable websites included.
 * The list with dorkable websites is updated regularly.
 * Some search engines ignore too many keywords/characters in a query and with argument -count it's easy to split your dork into more queries.
-* It contains a list for Bugcrowd, HackerOne, Intigrity and YesWeHack. With 1 command you can search domains of programs on several bug bounty platforms :)
+* It contains a list for several bug bounty platforms. With 1 command you can search domains of programs on several bug bounty platforms :)
 * Because you want to help plant more trees using the search engine Ecosia (Bing based)
 
 # Install
