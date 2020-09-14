@@ -26,7 +26,7 @@ Why wouldn't you just enter dorks for several websites manually? Because:
 * The list with dorkable websites is updated regularly.
 * Some search engines ignore too many keywords/characters in a query and with argument -count it's easy to split your dork into more queries.
 * It contains a list for several bug bounty platforms. With 1 command you can search domains of programs on several bug bounty platforms :)
-* Because you want to help plant more trees using the search engine Ecosia (Bing based)
+* Because you want to help plant more trees using the search engine [Ecosia](https://www.ecosia.org) (Bing based)
 
 # Install
 Sitedorks should be able to run with a default Kali Linux installation without installing additional Python packages.
