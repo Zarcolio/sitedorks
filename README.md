@@ -15,7 +15,7 @@ By default, these categories are on file:
 * social(48)
 * storage(4)
 
-# Why sitedorks?
+# Why use sitedorks?
 Why wouldn't you just enter dorks for several websites manually? Because:
 * It's really easy to query different search engines.
 * Dorks can be executed per 1 or more categories.
