@@ -63,6 +63,8 @@ optional arguments:
 ```
 
 # Examples
+Small warning here: if you don't use **-cat** sitedorks will open a lot of tabs in your browser and probably will make Google throw you a CAPTCHA.
+
 Want to look for "uber.com" with different sites containing all kinds of content using Google? Use the following command:
 ```
 sitedorks -query '"uber.com"'
