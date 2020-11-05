@@ -7,6 +7,11 @@ import sys
 import os
 
 def GetCat():
+    """
+    Return a dictionary of all available output lines
+
+    Args:
+    """
     dCatCounty = {}
     for sLine in lInputFile:
         sLine = sLine.strip()
