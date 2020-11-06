@@ -28,7 +28,7 @@ Why wouldn't you just enter dorks for several websites manually? Because:
 * Because you want to help plant more trees using the search engine [Ecosia](https://www.ecosia.org) (Bing based)
 
 # Install
-Sitedorks should be able to run with a default Kali Linux installation without installing additional Python packages.
+Sitedorks should be able to run with a default Kali Linux installation using Python 3 without installing additional Python packages.
 Just run:
 ```
 git clone https://github.com/Zarcolio/sitedorks
