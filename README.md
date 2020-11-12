@@ -1,5 +1,5 @@
 # About sitedorks
-Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/sitedorks.csv) is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 294 dorkable websites is available.
+Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/sitedorks.csv) is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 295 dorkable websites is available.
 By default, these categories are on file: 
 * analysis (11)
 * cloud (42)
@@ -12,7 +12,7 @@ By default, these categories are on file:
 * other (4)
 * remote (1)
 * shortener (23)
-* social (53)
+* social (54)
 * storage (5)
 
 # Why use sitedorks?
