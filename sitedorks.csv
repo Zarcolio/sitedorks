@@ -48,9 +48,12 @@ cmail20.com/t,comm
 code.google.com,dev
 codebeautify.org,dev
 codecov.io,dev
+codepad.co,dev
 codepad.org,dev
 codepen.io,dev
 codeproject.com,dev
+codeshare.io,dev
+coggle.it,docs
 cognitodocs.com,docs
 cookiepedia.co.uk,analysis
 core.ac.uk,docs
@@ -163,10 +166,12 @@ join.skype.com/invite,comm
 join.slack.com/t,comm
 jotform.com,forms
 jsbin.com,dev
+jsdelivr.net,dev
 jsfiddle.net,dev
 jsonformatter.org,dev
 keybase.io,comm
 kupdf.net,docs
+libraries.io,dev
 linkedin.com,social
 list-manage.com,comm
 lnkd.in,shortener
@@ -189,6 +194,8 @@ monster.com,orgs
 mvnrepository.com,dev
 myspace.com,social
 notion.so,other
+npm.runkit.com,dev
+npmjs.com,dev
 oal.lu,shortener
 ondemand.com,cloud
 onedrive.live.com,cloud
@@ -199,6 +206,7 @@ outlook.com,comm
 ow.ly,shortener
 packettotal.com,analysis
 parler.com,social
+papaly.com,social
 paper.li,social
 paste2.org,dev
 pastebin.com,dev
@@ -209,6 +217,7 @@ periscope.tv,social
 pinterest.com,social
 play.google.com,other
 prezi.com,docs
+productforums.google.com,social
 producthunt.com,social
 pscp.tv,social
 pxlme.me,shortener
@@ -233,6 +242,7 @@ searchcode.com,dev
 securitytrails.com,analysis
 service-now.com,other
 sforce.co,shortener
+sharecode.io,dev
 sharepoint.com,docs
 s.id,shortener
 slashdot.org,social
@@ -292,6 +302,7 @@ wikileaks.org,orgs
 wordpress.com,social
 wp.me,shortener
 wufoo.com,cloud
+ycombinator.com,orgs
 yelp.com,orgs
 youracclaim.com/badges,edu
 youtu.be,social
