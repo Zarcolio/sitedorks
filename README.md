@@ -71,7 +71,7 @@ Want to look for "uber website" (with quotes and spaces in the query)? Use the f
 ```
 sitedorks -query '"uber website"'
 ```
-Want to search for communication invites with yandex but leave site: out of the query? Just use the following command:
+Want to search for communication invites with Yandex but leave site: out of the query? Just use the following command:
 ```
 sitedorks -cat comm -site disable -engine yandex -query uber
 ```
