@@ -43,7 +43,6 @@ cloudapp.net,cloud
 cloudapp.azure.com,cloud
 cloudformz.com,docs
 cloudfront.net,cloud
-cloudinary.com,cloud
 cmail19.com/t,comm
 cmail20.com/t,comm
 code.google.com,dev
@@ -235,7 +234,8 @@ reddit.com,social
 regex101.com,dev
 regexlib.com,dev
 regexpal.com,dev
-repl.it,dev	
+repl.it,dev
+res.cloudinary.com,cloud
 rextester.com,dev
 reddit.com,social
 researchgate.net,docs
