@@ -12,6 +12,9 @@ By default, the following categories are on file:
 * orgs(23)
 * other(6)
 * remote(1)
+* shortener(27)
+* social(60)
+* storage(5)
 
 # Why use sitedorks?
 Why wouldn't you just enter dorks for several websites manually? Because:
