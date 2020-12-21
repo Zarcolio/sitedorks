@@ -37,7 +37,7 @@ sArgParser.add_argument('-site', metavar="<on|off|inurl>",help='Turn the \'site:
 sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded these domains from the search query.')
 sArgParser.add_argument('-echo',  help='Prints the search query URLs, for further use like piping or bookmarking.', action="store_true")
 sArgParser.add_argument('-ubb',  help='Updates bug bounty files (in en out scope) and exits. Uses bbrecon.', action="store_true")
-sArgParser.add_argument('-wait',  help='Wait x seconds, defaults to 5 seconds', default=5)
+sArgParser.add_argument('-wait', metavar="<seconds>", help='Wait x seconds, defaults to 5 seconds', default=5)
 
 aArguments=sArgParser.parse_args()
 
