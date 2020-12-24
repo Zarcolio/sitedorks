@@ -97,5 +97,11 @@ Use this command for finding juicy info only, because these domains are out of s
 sitedorks -file sitedorks-bbrecon-outscope.csv -cat somevdp -query "juicy info"
 ```
 
+# Google Dorks
+Don't know what to look for? 
+Try:
+* https://twitter.com/hashtag/googledork
+* https://gbhackers.com/latest-google-dorks-list
+
 # Contribute?
 Do you have some usefull additions to the script or to the list of dorkable websites, please send in a pull request to help make this script better or contact me @ [Twitter](https://twitter.com/zarcolio) :)
