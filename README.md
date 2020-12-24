@@ -100,7 +100,7 @@ sitedorks -file sitedorks-bbrecon-outscope.csv -cat somevdp -query "juicy info"
 # Google Dorks
 Don't know what to look for? 
 Try:
-* https://twitter.com/hashtag/googledork
+* https://twitter.com/hashtag/googledork%20OR%20%23googledorks
 * https://gbhackers.com/latest-google-dorks-list
 
 # Contribute?
