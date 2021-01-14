@@ -106,7 +106,7 @@ f6s.com,orgs
 facebook.com,social
 fastly.net,cloud
 fb.me,social
-FB.watch,social
+fb.watch,social
 feedbackcompany.com,orgs
 files.wordpress.com,docs
 finance.yahoo.com,orgs
@@ -138,6 +138,7 @@ gitlab.com,dev
 glassdoor.com,orgs
 gitter.im,social
 global.gotomeeting.com,comm
+gofile.io,storage
 goo.gl,shortener
 go.teamviewer.com,remote
 google.com/calendar/embed,comm
@@ -210,6 +211,7 @@ mjt.lu,comm
 mm.tt,docs
 monster.com,orgs
 mvnrepository.com,dev
+mybinder.org,dev
 myspace.com,social
 notion.so,other
 npm.runkit.com,dev
