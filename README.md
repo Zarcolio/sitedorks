@@ -8,7 +8,7 @@ By default, the following categories are on file:
 * dev(59)
 * docs(44)
 * edu(6)
-* find(2)
+* fin(2)
 * forms(12)
 * orgs(28)
 * other(6)
