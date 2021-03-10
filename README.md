@@ -3,7 +3,7 @@ Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several webs
 By default, the following categories are on file: 
 
 * analysis(12)
-* cloud(47)
+* cloud(48)
 * comm(39)
 * dev(62)
 * docs(48)
