@@ -13,8 +13,8 @@ By default, the following categories are on file:
 * orgs(32)
 * other(7)
 * remote(1)
-* shortener(34)
-* social(77)
+* shortener(33)
+* social(78)
 * storage(9)
 
 # Why use sitedorks?
