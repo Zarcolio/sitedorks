@@ -7,7 +7,7 @@ By default, the following categories are on file:
 * comm(45)
 * dev(62)
 * docs(56)
-* edu(7)
+* edu(8)
 * fin(10)
 * forms(12)
 * orgs(33)
