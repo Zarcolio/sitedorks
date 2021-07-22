@@ -14,7 +14,7 @@ By default, the following categories are on file:
 * other(7)
 * remote(1)
 * research(4)
-* shortener(34)
+* shortener(35)
 * social(80)
 * storage(9)
 
