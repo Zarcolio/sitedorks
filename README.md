@@ -10,7 +10,7 @@ By default, the following categories are on file:
 * edu(8)
 * fin(10)
 * forms(13)
-* orgs(33)
+* orgs(34)
 * other(7)
 * remote(1)
 * research(5)
