@@ -3,14 +3,14 @@ Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several webs
 By default, the following categories are on file: 
 
 * analysis(12)
-* cloud(53) 
+* cloud(54) 
 * comm(46)
 * dev(62)
 * docs(55)
 * edu(8)
 * fin(10)
 * forms(13)
-* orgs(34)
+* orgs(33)
 * other(7)
 * remote(1)
 * research(5)
