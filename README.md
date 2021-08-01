@@ -1,4 +1,4 @@
-# About sitedorks
+# [SiteDorks](https://github.com/Zarcolio/sitedorks) ![](https://img.shields.io/github/license/Zarcolio/sitedorks) ![](https://img.shields.io/github/forks/Zarcolio/sitedorks) ![](https://img.shields.io/github/stars/Zarcolio/sitedorks) ![](https://img.shields.io/github/issues/Zarcolio/sitedorks)
 Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/sitedorks.csv) is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 433 dorkable websites is available.
 By default, the following categories are on file: 
 
@@ -18,7 +18,7 @@ By default, the following categories are on file:
 * social(83)
 * storage(9)
 
-# Why use sitedorks?
+# Why use SiteDorks?
 Why wouldn't you just enter dorks for several websites manually? Because:
 * It's really easy to query different search engines.
 * Dorks can be executed per 1 or more categories.
@@ -33,14 +33,14 @@ Why wouldn't you just enter dorks for several websites manually? Because:
 * Because you want to help plant more trees using the search engine [Ecosia](https://www.ecosia.org) (Bing based)
 
 # Install
-Sitedorks should be able to run with a default Kali Linux installation using Python 3 without installing additional Python packages.
+SiteDorks should be able to run with a default Kali Linux installation using Python 3 without installing additional Python packages.
 Just run:
 ```
 git clone https://github.com/Zarcolio/sitedorks
 cd sitedorks
 bash install.sh
 ```
-If you're running into trouble running sitedorks, please drop me an issue and I'll try to fix it :)
+If you're running into trouble running SiteDorks, please drop me an issue and I'll try to fix it :)
 
 # Usage
 ```
