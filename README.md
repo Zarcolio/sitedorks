@@ -66,7 +66,7 @@ optional arguments:
   -ubb                  Updates bug bounty files (in en out scope) and exits. Uses bbrecon.
   -wait <seconds>       Wait x seconds, defaults to 5 seconds.
 ```
-
+e
 # Examples
 Small warning here: if you don't use **-cat** sitedorks will open a lot of tabs in your browser and probably will make Google throw you a CAPTCHA. Increase waiting time with option '-wait' to decrease the chance of getting a CAPTCHA.
 
