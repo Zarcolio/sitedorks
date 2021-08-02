@@ -18,7 +18,6 @@ appspot.com,cloud
 apollo.io,orgs
 aptoide.com,other
 appurl.io,shortener
-arxiv.org,research
 atlassian.net,dev
 avaaz.org,social
 petitions,social
@@ -39,7 +38,6 @@ badoo.com,social
 bamboohr.com/jobs,orgs
 bcwt.webex.com,comm
 bgp.he.net,analysis
-biorxiv.org,research
 bitbucket.org,dev
 bitchute.com,social
 bit.do,shortener
@@ -115,7 +113,6 @@ docs.office.com,docs
 docstack.com,docs
 docshare.tips,docs
 documentcloud.org/documents,docs
-doi.org,research
 domainbigdata.com,analysis
 dotnetfiddle.net,dev
 drive.google.com,cloud
@@ -265,7 +262,6 @@ mybinder.org,dev
 myspace.com,social
 myworkdayjobs.com,orgs
 narkive.com,comm
-nature.com/articles,research
 netdna-ssl.com,cloud
 notion.so,other
 runkit.com,dev
@@ -324,8 +320,6 @@ repl.it,dev
 res.cloudinary.com,cloud
 rextester.com,dev
 reddit.com,social
-researchgate.net,research
-research.net/r,research
 reservio.com,cloud
 rocketreach.co,orgs
 scribd.com,docs

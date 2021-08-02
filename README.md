@@ -1,5 +1,6 @@
 # [SiteDorks](https://github.com/Zarcolio/sitedorks) ![](https://img.shields.io/github/license/Zarcolio/sitedorks) ![](https://img.shields.io/github/forks/Zarcolio/sitedorks) ![](https://img.shields.io/github/stars/Zarcolio/sitedorks) ![](https://img.shields.io/github/issues/Zarcolio/sitedorks)
 Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/sitedorks.csv) is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 433 dorkable websites is available.
+
 By default, the following categories are on file: 
 
 * analysis(12)
@@ -13,7 +14,6 @@ By default, the following categories are on file:
 * orgs(33)
 * other(7)
 * remote(1)
-* research(6)
 * shortener(35)
 * social(83)
 * storage(9)
@@ -67,7 +67,7 @@ optional arguments:
   -ubb                  Updates bug bounty files (in en out scope) and exits. Uses bbrecon.
   -wait <seconds>       Wait x seconds, defaults to 5 seconds.
 ```
-
+e
 # Examples
 Small warning here: if you don't use **-cat** sitedorks will open a lot of tabs in your browser and probably will make Google throw you a CAPTCHA. Increase waiting time with option '-wait' to decrease the chance of getting a CAPTCHA.
 
