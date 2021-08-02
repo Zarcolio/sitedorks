@@ -69,7 +69,7 @@ optional arguments:
 ```
 e
 # Examples
-Small warning here: if you don't use **-cat** sitedorks will open a lot of tabs in your browser and probably will make Google throw you a CAPTCHA. Increase waiting time with option '-wait' to decrease the chance of getting a CAPTCHA.
+Small warning here: if you don't use **-cat** SiteDorks will open a lot of tabs in your browser and probably will make Google throw you a CAPTCHA. Increase waiting time with option '-wait' to decrease the chance of getting a CAPTCHA.
 
 Want to look for "uber.com" with different sites containing all kinds of content using Google? Use the following command:
 ```
