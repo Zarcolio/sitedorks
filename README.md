@@ -19,7 +19,7 @@ By default, the following categories are on file:
 * storage(9)
 
 # Why use SiteDorks?
-Why wouldn't you just enter dorks for several websites manually? Because:
+Why wouldn't you just enter dorks for several websites manually? Think of this:
 * It's really easy to query different search engines.
 * Dorks can be executed per 1 or more categories.
 * It's easy to create different input files for different uses.
