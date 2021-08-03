@@ -67,7 +67,7 @@ optional arguments:
   -ubb                  Updates bug bounty files (in en out scope) and exits. Uses bbrecon.
   -wait <seconds>       Wait x seconds, defaults to 5 seconds.
 ```
-e
+
 # Examples
 Small warning here: if you don't use **-cat** SiteDorks will open a lot of tabs in your browser and probably will make Google throw you a CAPTCHA. Increase waiting time with option '-wait' to decrease the chance of getting a CAPTCHA.
 
@@ -108,4 +108,7 @@ Try:
 * https://gbhackers.com/latest-google-dorks-list
 
 # Contribute?
-Do you have some usefull additions to the script or to the list of dorkable websites, please send in a pull request to help make this script better or contact me @ [Twitter](https://twitter.com/zarcolio) :)
+Do you have some usefull additions to the script or to the list of dorkable websites:
+
+* [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/Zarcolio/sitedorks/pulls) 
+* [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/zarcolio.svg?style=social&label=Contact%20me)](https://twitter.com/zarcolio)
