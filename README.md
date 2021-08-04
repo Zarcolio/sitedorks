@@ -40,7 +40,7 @@ git clone https://github.com/Zarcolio/sitedorks
 cd sitedorks
 bash install.sh
 ```
-If you're running into trouble running SiteDorks, please drop me an issue and I'll try to fix it :)
+If you're running into trouble running SiteDorks, please drop me an [issue](https://github.com/Zarcolio/sitedorks/issues) and I'll try to fix it :)
 
 # Usage
 ```
