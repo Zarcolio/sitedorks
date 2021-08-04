@@ -1,4 +1,4 @@
- ![](https://img.shields.io/github/license/Zarcolio/sitedorks) ![](https://img.shields.io/github/stars/Zarcolio/sitedorks) ![](https://img.shields.io/github/forks/Zarcolio/sitedorks) ![](https://img.shields.io/github/issues/Zarcolio/sitedorks) ![](https://img.shields.io/github/issues-closed-raw/Zarcolio/sitedorks)
+ ![](https://img.shields.io/github/license/Zarcolio/sitedorks) ![](https://img.shields.io/github/stars/Zarcolio/sitedorks) ![](https://img.shields.io/github/forks/Zarcolio/sitedorks) ![](https://img.shields.io/github/issues/Zarcolio/sitedorks) ![](https://img.shields.io/github/issues-closed-raw/Zarcolio/sitedorks)  ![](https://img.shields.io/github/issues-pr/Zarcolio/sitedorks) ![](https://img.shields.io/github/issues-pr-closed-raw/Zarcolio/sitedorks)
 
 # About [SiteDorks](https://github.com/Zarcolio/sitedorks) ![](https://img.shields.io/static/v1?label=&message=Help%20wanted&color=green)
 
