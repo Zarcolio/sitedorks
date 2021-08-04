@@ -1,4 +1,4 @@
-# [SiteDorks](https://github.com/Zarcolio/sitedorks) ![](https://img.shields.io/github/license/Zarcolio/sitedorks) ![](https://img.shields.io/github/forks/Zarcolio/sitedorks) ![](https://img.shields.io/github/stars/Zarcolio/sitedorks) ![](https://img.shields.io/github/issues/Zarcolio/sitedorks)
+# [SiteDorks](https://github.com/Zarcolio/sitedorks) ![](https://img.shields.io/github/license/Zarcolio/sitedorks) ![](https://img.shields.io/github/stars/Zarcolio/sitedorks) ![](https://img.shields.io/github/forks/Zarcolio/sitedorks) ![](https://img.shields.io/github/issues/Zarcolio/sitedorks)
 Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/sitedorks.csv) is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 427 dorkable websites is available.
 
 By default, the following categories are on file: 
@@ -106,7 +106,7 @@ Try:
 * https://gbhackers.com/latest-google-dorks-list
 
 # Contribute?
-Do you have some usefull additions to the script or to the list of dorkable websites:
+Do you have some usefull additions to SiteDorks or to the list of dorkable websites:
 
 * [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/Zarcolio/sitedorks/pulls) 
 * [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/zarcolio.svg?style=social&label=Contact%20me)](https://twitter.com/zarcolio)
