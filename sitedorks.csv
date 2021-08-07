@@ -9,6 +9,7 @@ academia.edu,docs
 acquiredby.co,orgs
 airbnb.com,social
 amazonaws.com,cloud
+anzdoc.com,docs
 apiary.io,cloud
 app.any.run,analysis
 appdomain.cloud,cloud
@@ -20,7 +21,6 @@ aptoide.com,other
 appurl.io,shortener
 atlassian.net,dev
 avaaz.org,social
-petitions,social
 awstrack.me,comm
 azorus.com,edu
 azure-api.net,cloud
@@ -292,6 +292,7 @@ patreon.com,fin
 paypal.me,fin
 pdffiller.com,docs
 periscope.tv,social
+petitions,social
 pinterest.com,social
 play.google.com,other
 prezi.com,docs
