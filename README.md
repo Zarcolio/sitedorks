@@ -2,7 +2,7 @@
 
 # About [SiteDorks](https://github.com/Zarcolio/sitedorks) ![](https://img.shields.io/static/v1?label=&message=Help%20wanted&color=green)
 
-Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/sitedorks.csv) is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 430 dorkable websites is available.
+Search Google, Bing, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/sitedorks.csv) is already provided, which contains Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 431 dorkable websites is available.
 
 By default, the following categories are on file: 
 
@@ -10,7 +10,7 @@ By default, the following categories are on file:
 * cloud(54) 
 * comm(47)
 * dev(62)
-* docs(57)
+* docs(58)
 * edu(8)
 * fin(10)
 * forms(12)
