@@ -31,8 +31,10 @@ Why wouldn't you just enter dorks for several websites manually? Think of this:
 * The list with dorkable websites is updated regularly.
 * Some search engines ignore too many keywords/characters in a query and with argument -count it's easy to split your dork into more queries.
 * It contains a list of several bug bounty platforms. With 1 command you can search domains of programs on several bug bounty platforms. Find the "easter egg" in this feature :)
+* It contains generic lists for other counties such as China, Germany, Korea, The Netherlands and Russia.
+ * *Need help here with generic lists for other countries, both with more entries in the current lists and with more lists.
 * It contains a list of Dutch governmental agencies and educational services. With 1 command you can search domains either of the Dutch government or educational services.
-  * *Need help here for other lists that can be useful, for example domains of government and educational services in other countries.*
+  * *Need help here with other lists that can be useful, for example domains of government and educational services in other countries.*
 * Because you want to help plant more trees using the search engine [Ecosia](https://www.ecosia.org) (Bing based).
 
 # Install
