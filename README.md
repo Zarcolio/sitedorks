@@ -111,7 +111,7 @@ Try:
 * https://gbhackers.com/latest-google-dorks-list
 
 # Contribute?
-Do you have some usefull additions to SiteDorks or to the list of dorkable websites:
+Do you have some usefull additions to SiteDorks script or to the list of dorkable websites:
 
 * [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/Zarcolio/sitedorks/pulls) 
 * [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/zarcolio.svg?style=social&label=Contact%20me)](https://twitter.com/zarcolio)
