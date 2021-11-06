@@ -20,6 +20,7 @@ app.any.run,analysis
 appdomain.cloud,cloud
 app.link,shortener
 apps.apple.com,other
+apps.fcc.gov,orgs
 appspot.com,cloud
 apollo.io,orgs
 aptoide.com,other
@@ -148,6 +149,7 @@ fal.cn,shortener
 fastly.net,cloud
 fb.me,social
 fb.watch,social
+fccid.io,orgs
 fdocuments.in,docs
 feedbackcompany.com,orgs
 files.wordpress.com,docs
