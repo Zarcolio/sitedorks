@@ -18,7 +18,7 @@ By default, the following categories are on file:
 * other(7)
 * remote(1)
 * shortener(36)
-* social(85)
+* social(84)
 * storage(9)
 
 # Why use SiteDorks?
