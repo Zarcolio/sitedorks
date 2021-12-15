@@ -14,11 +14,11 @@ By default, the following categories are on file:
 * edu(10)
 * fin(12)
 * forms(12)
-* orgs(42)
+* orgs(43)
 * other(7)
 * remote(1)
 * shortener(36)
-* social(83)
+* social(82)
 * storage(9)
 
 # Why use SiteDorks?
