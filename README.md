@@ -105,7 +105,7 @@ sitedorks -file sitedorks-bbrecon-outscope.csv -cat somevdp -query "juicy info"
 ```
 For searching in Dutch (para)medical websites, use the following command:
 ```
-sitedorks -cat medi -file sitedorks-nl.csv
+sitedorks -cat medi -file sitedorks-nl.csv -query somekeyword
 ```
 
 # Google Dorks
