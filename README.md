@@ -108,9 +108,6 @@ For searching in Dutch (para)medical websites, use the following command:
 sitedorks -cat medi -file sitedorks-nl.csv
 ```
 
-And if you  want to see which categories are on file, for example with the [hackerone](https://www.hackerone.com) platform:
-
-
 # Google Dorks
 Don't know what to look for? 
 Try:
