@@ -32,12 +32,13 @@ sArgParser.add_argument('-cats', help='Show all categories on file, use with or 
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites are searched per query. Google has a maximum length for queries.')
 sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'baidu\', \'bing\', \'bing-ecosia\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'bing-ecosia', 'baidu', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
+sArgParser.add_argument('-filter', metavar="<string>", help='Only query for sites with this string.')
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.')
 sArgParser.add_argument('-site', metavar="<on|off|inurl>",help='Turn the \'site:\' operator \'on\' or \'off\', or replace it with \'inurl:\' (only for Google), defaults to \'on\'.',default='on', choices=['on', 'off', 'inurl'])
 sArgParser.add_argument('-excl', metavar="<domains>",  help='Excluded these domains from the search query.')
 sArgParser.add_argument('-echo',  help='Prints the search query URLs, for further use like piping or bookmarking.', action="store_true")
 sArgParser.add_argument('-ubb',  help='Updates bug bounty files (in en out scope) and exits. Uses bbrecon.', action="store_true")
-sArgParser.add_argument('-wait', metavar="<seconds>", help='Wait x seconds, defaults to 5 seconds', default=5)
+sArgParser.add_argument('-wait', metavar="<seconds>", help='Wait x seconds, defaults to 5 seconds.', default=5)
 
 aArguments=sArgParser.parse_args()
 
@@ -116,11 +117,10 @@ if aArguments.ubb:
 sAnswer=""
 if not aArguments.cat and aArguments.query and not aArguments.help:
     while sAnswer.lower() != "y" and sAnswer.lower() != "n":
-        sAnswer = input("Not providing -cat will open a whole lot of tabs/windows in your browser. Do you want to continue? (y/n) ")
+        sAnswer = input("Not providing -cat can open a whole lot of tabs/windows in your browser. Do you want to continue? (y/n) ")
 
     if sAnswer.lower() == "n":
         exit()
-
 
 if aArguments.site == "inurl" and aArguments.engine != "google" and aArguments.engine != "duckduckgo":
     print("inurl: only works with Google and DuckDuckGo.")
@@ -222,6 +222,9 @@ sEndQuery = ")"
 
 for sInputFileLine in lInputFile:
 
+    if aArguments.filter:
+        if aArguments.filter not in sInputFileLine:
+            continue
 
     sInputFileLine = sInputFileLine.strip()
     lInputFileLineCsv = sInputFileLine.split(",")
@@ -246,12 +249,13 @@ for sInputFileLine in lInputFile:
 
     if iFirst == 0: iFirst = 1
 
-    if iCount % iNewUrlAfter == 0 or iCount == iLines:
-        dQuery[iUrls] += sEndQuery
-
     if iCount % iNewUrlAfter == 0:
         iUrls += 1
         iFirst = 0
+
+
+dQuery[iUrls] += sEndQuery
+
 
 for sSingleQuery in dQuery.values():
     if aArguments.echo:
