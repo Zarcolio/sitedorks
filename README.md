@@ -63,6 +63,7 @@ optional arguments:
   -count <count>        How many websites are searched per query. Google has a maximum length for queries.
   -engine <engine>      Search with 'google', 'baidu', 'bing', 'bing-ecosia', 'duckduckgo' 'yahoo' or 'yandex', defaults to 'google'.
   -file <file>          Enter a custom website list.
+  -filter <string>      Only query for sites with this string.
   -query <query>        Enter a mandatory search term.
   -site <on|off|inurl>  Turn the 'site:' operator 'on' or 'off', or replace it with 'inurl:' (only for Google), defaults to 'on'.
   -excl <domains>       Excluded these domains from the search query.
