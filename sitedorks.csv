@@ -26,7 +26,6 @@ appurl.io,shortener
 aptoide.com,other
 arcgis.com,cloud
 atlassian.net,dev
-avaaz.org,social
 awstrack.me,comm
 azorus.com,edu
 azure-api.net,cloud
@@ -388,6 +387,7 @@ salesforce.com,cloud
 scamadviser.com/check-website,orgs
 scribd.com,docs
 searchcode.com,dev
+secure.avaaz.org/campaign,social 
 securitytrails.com,analysis
 servers.discordland.gg/servers/server,comm
 service-now.com,other
