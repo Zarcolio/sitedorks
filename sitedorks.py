@@ -25,8 +25,23 @@ def GetCat():
             
     return sCatList
 
+def GetComment():
+    boolHelpFound = False
+    for sLine in lInputFile:
+        sLine = sLine.strip()
+
+        if len(sLine) > 0:
+            if sLine[0] == "#":
+                print (sLine)
+                boolHelpFound = True
+            elif boolHelpFound == False:
+                    print("No help comment found in " + sInputFile)
+                    exit(2)
+    exit(0)
+
 sArgParser=argparse.ArgumentParser(add_help=False, description="Use your favorite search engine to search for a search term with different websites. Use single quotes around a query with double quotes. Be sure to enclose a query with single quotes it contains shell control characters like space, ';', '>', '|', etc.")
 sArgParser.add_argument('-h', '--help', help='Show this help message, print categories on file (add -file to check other CSV file) and exit.', action="store_true")
+sArgParser.add_argument("-hh", "--help2", help="Show the help inside a .csv file being called. Lines in the beginning of the script starting with # are displayed as help.", action="store_true")
 sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories, use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-cats', help='Show all categories on file, use with or without -file.', action="store_true")
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites are searched per query. Google has a maximum length for queries.')
@@ -170,7 +185,10 @@ if aArguments.excl:
 try:
     fInputFile = open(sInputFile, 'r')
     lInputFile = fInputFile.readlines()
- 
+
+    if aArguments.help2:
+        GetComment()
+        
     if aArguments.cats:
         sCatList = GetCat()
         print()
