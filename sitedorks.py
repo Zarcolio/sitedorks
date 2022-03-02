@@ -12,6 +12,10 @@ def GetCat():
     for sLine in lInputFile:
         sLine = sLine.strip()
         lLine = sLine.split(",")
+        
+        if sLine[0] == "#":
+            continue
+        
         if lLine[1] in dCatCounty:
             dCatCounty[lLine[1]] = dCatCounty[lLine[1]] + 1
         else:
@@ -249,6 +253,9 @@ for sInputFileLine in lInputFile:
             continue
 
     sInputFileLine = sInputFileLine.strip()
+    if sInputFileLine[0] == "#":
+        continue
+
     lInputFileLineCsv = sInputFileLine.split(",")
 
     if aArguments.excl:
