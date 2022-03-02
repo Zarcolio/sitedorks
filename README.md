@@ -58,6 +58,7 @@ space, ';', '>', '|', etc.
 
 optional arguments:
   -h, --help            Show this help message, print categories on file (add -file to check other CSV file) and exit.
+  -hh, --help2          Show the help inside a .csv file being called. Lines in the beginning of the script starting with # are displayed as help.
   -cat <category>       Choose from 1 or more categories, use ',' (comma) as delimiter. Defaults to all categories.
   -cats                 Show all categories on file, use with or without -file.
   -count <count>        How many websites are searched per query. Google has a maximum length for queries.
