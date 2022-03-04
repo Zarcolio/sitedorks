@@ -115,6 +115,7 @@ Don't know what to look for?
 Try:
 * https://twitter.com/hashtag/googledork%20OR%20%23googledorks
 * https://gbhackers.com/latest-google-dorks-list
+* https://www.dorksearch.com
 
 # Contribute?
 Do you have some usefull additions to SiteDorks script or to the list of dorkable websites:
