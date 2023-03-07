@@ -2,7 +2,15 @@
 
 scriptname="sitedorks.py"
 
-pip3 install -r requirements.txt
+# Attempt to install the packages using pip3
+sudo pip3 install -r requirements.txt 2>&1 | grep "error: externally-managed-environment" >/dev/null
+
+if [ $? -eq 0 ]; then
+    # If the pip3 installation failed, install the packages using apt
+    echo "Installing required packages using apt"
+    sudo apt-get update
+    sudo apt-get install -y $(cat requirements.txt)
+fi
 
 dir=$(pwd)
 
