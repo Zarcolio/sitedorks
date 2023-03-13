@@ -49,7 +49,7 @@ sArgParser.add_argument("-hh", "--help2", help="Show the help inside a .csv file
 sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories, use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-cats', help='Show all categories on file, use with or without -file.', action="store_true")
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites are searched per query. Google has a maximum length for queries.')
-sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'baidu\', \'bing\', \'bing-ecosia\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'bing-ecosia', 'baidu', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
+sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'baidu\', \'bing\', \'bing-ecosia\', \'brave\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'bing-ecosia', 'brave', 'baidu', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
 sArgParser.add_argument('-filter', metavar="<string>", help='Only query for sites with this string.')
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.')
@@ -223,6 +223,8 @@ elif aArguments.engine == "bing":
     sQuery = "https://www.bing.com/search?&count=100&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "bing-ecosia":
     sQuery = "https://www.ecosia.org/search?&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
+elif aArguments.engine == "brave":
+    sQuery = "https://search.brave.com/search?offset=1&spellcheck=0&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "duckduckgo":
     sQuery = "https://duckduckgo.com/?q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "yandex":
