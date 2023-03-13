@@ -62,7 +62,7 @@ optional arguments:
   -cat <category>       Choose from 1 or more categories, use ',' (comma) as delimiter. Defaults to all categories.
   -cats                 Show all categories on file, use with or without -file.
   -count <count>        How many websites are searched per query. Google has a maximum length for queries.
-  -engine <engine>      Search with 'google', 'baidu', 'bing', 'bing-ecosia', 'duckduckgo' 'yahoo' or 'yandex', defaults to 'google'.
+  -engine <engine>      Search with 'google', 'baidu', 'bing', 'brave', 'bing-ecosia', 'duckduckgo' 'yahoo' or 'yandex', defaults to 'google'.
   -file <file>          Enter a custom website list.
   -filter <string>      Only query for sites with this string.
   -query <query>        Enter a mandatory search term.
