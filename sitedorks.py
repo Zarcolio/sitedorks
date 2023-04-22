@@ -6,27 +6,20 @@ import webbrowser
 import sys
 import os
 import time
+from collections import defaultdict
 
-def GetCat():
-    dCatCounty = {}
+def get_categories():
+    dCatCounty = defaultdict(int)
     for sLine in lInputFile:
         sLine = sLine.strip()
-        lLine = sLine.split(",")
-        
-        if sLine[0] == "#":
+        if not sLine or sLine[0] == "#":
             continue
-        
-        if lLine[1] in dCatCounty:
-            dCatCounty[lLine[1]] = dCatCounty[lLine[1]] + 1
-        else:
-            dCatCounty[lLine[1]] = 1
-    sCatList = ""
-    for iCounter, sCat in enumerate(sorted(dCatCounty)):
-        if iCounter == len(dCatCounty)-1:
-            sCatList = f"{sCatList}{sCat}({dCatCounty[sCat]})."
-        else:
-            sCatList = f"{sCatList}{sCat}({dCatCounty[sCat]}), "
-            
+        lLine = sLine.split(",")
+        if len(lLine) < 2:
+            continue
+        dCatCounty[lLine[1]] += 1
+    sCatList = "\n".join(f"- {sCat}({dCatCounty[sCat]})" for sCat in sorted(dCatCounty))
+
     return sCatList
 
 def GetComment():
@@ -43,7 +36,7 @@ def GetComment():
                     exit(2)
     exit(0)
 
-sArgParser=argparse.ArgumentParser(add_help=False, description="Use your favorite search engine to search for a search term with different websites. Use single quotes around a query with double quotes. Be sure to enclose a query with single quotes it contains shell control characters like space, ';', '>', '|', etc.")
+sArgParser=argparse.ArgumentParser(add_help=False, description="""Use your favorite search engine to search for a search term with different websites. Use single quotes around a query with double quotes. Be sure to enclose a query with single quotes it contains shell control characters like space, ';', '>', '|', etc.""")
 sArgParser.add_argument('-h', '--help', help='Show this help message, print categories on file (add -file to check other CSV file) and exit.', action="store_true")
 sArgParser.add_argument("-hh", "--help2", help="Show the help inside a .csv file being called. Lines in the beginning of the script starting with # are displayed as help.", action="store_true")
 sArgParser.add_argument('-browser', metavar='<browser>', help='Supply the browser executable to use or use the default browser.', default=None)
@@ -68,7 +61,6 @@ if aArguments.ubb:
     import json
     from tldextract import extract
     
-    #sOutput = subprocess.check_output("bbrecon get scopes --type web --output json", shell=True)
     sOutput = subprocess.check_output("bbrecon get programs --type web -o json", shell=True)
     fCsvInScope = open(os.path.dirname(os.path.realpath(sys.argv[0])) + "/sitedorks-bbrecon-inscope.csv", 'w', buffering=1)
     fCsvOutScope = open(os.path.dirname(os.path.realpath(sys.argv[0])) + "/sitedorks-bbrecon-outscope.csv", 'w', buffering=1)
@@ -78,9 +70,6 @@ if aArguments.ubb:
     dDomainsOutScope = {}
     for sLine in OutputJson:
         sLine["slug"] = sLine["slug"].lower()
-        #print(sLine["in_scope"])
-        #print(sLine["out_scope"])
-        #print()
         for sInScope in sLine["in_scope"]:
             if sInScope["type"] == "web":
                 lInScopeValues = sInScope["value"].lower().split(",")
@@ -104,7 +93,7 @@ if aArguments.ubb:
                         sDomain = sOutScopeValue
                     else:
                         dl3, dl2, dl1 = extract(sOutScopeValue)
-                        sDomain = dl2 + "." + dl1
+                        sDomain = f"{dl2}.{dl1}"
     
                     if " " in sDomain or "*" in sDomain or sDomain.endswith(".") or sDomain.endswith(".onion"):
                         continue
@@ -195,14 +184,14 @@ try:
         GetComment()
         
     if aArguments.cats:
-        sCatList = GetCat()
+        sCatList = get_categories()
         print()
-        print("Current categories on file are: " + sCatList)
+        print("Current categories on file are: \n" + sCatList)
         print()
         exit(0)
         
     if aArguments.help:
-        sCatList = GetCat()
+        sCatList = get_categories()
         sArgParser.print_help()
         print()
         print("Current categories on file are: " + sCatList)
@@ -215,22 +204,21 @@ except FileNotFoundError:
     print(sInputFile + " not found...")
     exit(2)
 
+SEARCH_ENGINES = {
+    "google": "https://www.google.com/search?num=100&filter=0&q=",
+    "baidu": "https://www.baidu.com/s?wd=",
+    "bing": "https://www.bing.com/search?&count=100&q=",
+    "bing-ecosia": "https://www.ecosia.org/search?&q=",
+    "duckduckgo": "https://duckduckgo.com/?q=",
+    "yandex": "https://yandex.com/search/?text=",
+    "yahoo": "https://search.yahoo.com/search?n=100&p="
+}
 
-if aArguments.engine == "google":
-    sQuery = "https://www.google.com/search?num=100&filter=0&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
-elif aArguments.engine == "baidu":
-    sQuery = "https://www.baidu.com/s?wd=" + urllib.parse.quote(aArguments.query) + "+("
-elif aArguments.engine == "bing":
-    sQuery = "https://www.bing.com/search?&count=100&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
-elif aArguments.engine == "bing-ecosia":
-    sQuery = "https://www.ecosia.org/search?&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
-elif aArguments.engine == "duckduckgo":
-    sQuery = "https://duckduckgo.com/?q=" + urllib.parse.quote(aArguments.query) + "+AND+("
-elif aArguments.engine == "yandex":
-    sQuery = "https://yandex.com/search/?text=" + urllib.parse.quote(aArguments.query) + "+AND+("
-elif aArguments.engine == "yahoo":
-    sQuery = "https://search.yahoo.com/search?n=100&p=" + urllib.parse.quote(aArguments.query) + "+AND+("
-
+if aArguments.engine in SEARCH_ENGINES:
+    sQuery = SEARCH_ENGINES[aArguments.engine] + urllib.parse.quote(aArguments.query) + "+AND+("
+else:
+    # handle invalid search engine
+    raise ValueError("Invalid search engine specified")
 
 iFirst = 0
 iCount = 0
@@ -284,8 +272,7 @@ for sInputFileLine in lInputFile:
         iFirst = 0
 
 
-dQuery[iUrls] += sEndQuery
-
+#dQuery[iUrls] += sEndQuery
 
 for i in range(len(dQuery)):
     sSingleQuery = dQuery.get(i, '')
@@ -293,5 +280,6 @@ for i in range(len(dQuery)):
         if aArguments.echo:
             print(sSingleQuery)
         
-        webbrowser.get(aArguments.browser).open(sSingleQuery)
+        webbrowser.get(aArguments.browser).open(sSingleQuery + sEndQuery)
         time.sleep(int(aArguments.wait))
+
