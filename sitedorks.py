@@ -23,9 +23,9 @@ def GetCat():
     sCatList = ""
     for iCounter, sCat in enumerate(sorted(dCatCounty)):
         if iCounter == len(dCatCounty)-1:
-            sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + ")."
+            sCatList = f"{sCatList}{sCat}({dCatCounty[sCat]})."
         else:
-            sCatList = sCatList + sCat + "(" + str(dCatCounty[sCat]) + "), "
+            sCatList = f"{sCatList}{sCat}({dCatCounty[sCat]}), "
             
     return sCatList
 
@@ -38,18 +38,19 @@ def GetComment():
             if sLine[0] == "#":
                 print (sLine)
                 boolHelpFound = True
-            elif boolHelpFound == False:
-                    print("No help comment found in " + sInputFile)
+            elif not boolHelpFound:
+                    print(f"No help comment found in {sInputFile}")
                     exit(2)
     exit(0)
 
 sArgParser=argparse.ArgumentParser(add_help=False, description="Use your favorite search engine to search for a search term with different websites. Use single quotes around a query with double quotes. Be sure to enclose a query with single quotes it contains shell control characters like space, ';', '>', '|', etc.")
 sArgParser.add_argument('-h', '--help', help='Show this help message, print categories on file (add -file to check other CSV file) and exit.', action="store_true")
 sArgParser.add_argument("-hh", "--help2", help="Show the help inside a .csv file being called. Lines in the beginning of the script starting with # are displayed as help.", action="store_true")
+sArgParser.add_argument('-browser', metavar='<browser>', help='Supply the browser executable to use or use the default browser.', default=None)
 sArgParser.add_argument('-cat', metavar="<category>", help='Choose from 1 or more categories, use \',\' (comma) as delimiter. Defaults to all categories.')
 sArgParser.add_argument('-cats', help='Show all categories on file, use with or without -file.', action="store_true")
 sArgParser.add_argument('-count', metavar="<count>", help='How many websites are searched per query. Google has a maximum length for queries.')
-sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'baidu\', \'bing\', \'bing-ecosia\', \'brave\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'bing-ecosia', 'brave', 'baidu', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
+sArgParser.add_argument('-engine', metavar="<engine>", help='Search with \'google\', \'baidu\', \'bing\', \'bing-ecosia\', \'duckduckgo\' \'yahoo\' or \'yandex\', defaults to \'google\'.', choices=['bing', 'bing-ecosia', 'baidu', 'duckduckgo', 'google', 'yahoo', 'yandex'], default="google")
 sArgParser.add_argument('-file', metavar="<file>", help='Enter a custom website list.')
 sArgParser.add_argument('-filter', metavar="<string>", help='Only query for sites with this string.')
 sArgParser.add_argument('-query', metavar="<query>",  help='Enter a mandatory search term.')
@@ -223,8 +224,6 @@ elif aArguments.engine == "bing":
     sQuery = "https://www.bing.com/search?&count=100&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "bing-ecosia":
     sQuery = "https://www.ecosia.org/search?&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
-elif aArguments.engine == "brave":
-    sQuery = "https://search.brave.com/search?offset=1&spellcheck=0&q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "duckduckgo":
     sQuery = "https://duckduckgo.com/?q=" + urllib.parse.quote(aArguments.query) + "+AND+("
 elif aArguments.engine == "yandex":
@@ -294,5 +293,5 @@ for i in range(len(dQuery)):
         if aArguments.echo:
             print(sSingleQuery)
         
-        webbrowser.open(sSingleQuery)
+        webbrowser.get(aArguments.browser).open(sSingleQuery)
         time.sleep(int(aArguments.wait))
