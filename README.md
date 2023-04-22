@@ -49,7 +49,7 @@ If you're running into trouble running SiteDorks, please drop me an [issue](http
 
 # Usage
 ```
-usage: sitedorks [-h] [-cat <category>] [-cats] [-count <count>] [-engine <engine>] [-file <file>]
+usage: sitedorks [-h] [-browser <browser>] [-cat <category>] [-cats] [-count <count>] [-engine <engine>] [-file <file>]
 [-query <query>] [-site <on|off|inurl>] [-excl <domains>] [-echo]
 
 Use your favorite search engine to search for a search term with different websites. Use single quotes around a
@@ -59,6 +59,7 @@ space, ';', '>', '|', etc.
 optional arguments:
   -h, --help            Show this help message, print categories on file (add -file to check other CSV file) and exit.
   -hh, --help2          Show the help inside a .csv file being called. Lines in the beginning of the script starting with # are displayed as help.
+  -browser <browser>    Supply the browser executable to use or use the default browser.
   -cat <category>       Choose from 1 or more categories, use ',' (comma) as delimiter. Defaults to all categories.
   -cats                 Show all categories on file, use with or without -file.
   -count <count>        How many websites are searched per query. Google has a maximum length for queries.
