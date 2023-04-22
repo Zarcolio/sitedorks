@@ -18,11 +18,11 @@ def get_categories():
         if len(lLine) < 2:
             continue
         dCatCounty[lLine[1]] += 1
-    sCatList = "\n".join(f"- {sCat}({dCatCounty[sCat]})" for sCat in sorted(dCatCounty))
+    sCatList = "\n".join(f"  -{sCat}({dCatCounty[sCat]})" for sCat in sorted(dCatCounty))
 
     return sCatList
 
-def GetComment():
+def get_comment():
     boolHelpFound = False
     for sLine in lInputFile:
         sLine = sLine.strip()
@@ -117,9 +117,9 @@ if aArguments.ubb:
             continue
 
     if not bFailed:
-        print("sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv have been updated.")
+        print(f"sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv have been updated.")
     else:
-        print("Something went wrong while writing the files.")
+        print(f"Something went wrong while writing the files.")
         
     exit()
 
@@ -132,7 +132,7 @@ if not aArguments.cat and aArguments.query and not aArguments.help:
         exit()
 
 if aArguments.site == "inurl" and aArguments.engine != "google" and aArguments.engine != "duckduckgo":
-    print("inurl: only works with Google and DuckDuckGo.")
+    print(f"inurl: only works with Google and DuckDuckGo.")
     print()
     sArgParser.print_help()
     sys.exit(2)
@@ -146,7 +146,7 @@ else:
 if aArguments.count:
     iNewUrlAfter = int(aArguments.count)
     if aArguments.engine == "baidu":
-        print("Because of limitations with Baidu, -count is lowered to 2.")
+        print(f"Because of limitations with Baidu, -count is lowered to 2.")
         iNewUrlAfter = 2
 else:
     iNewUrlAfter = 14
@@ -181,24 +181,23 @@ try:
     lInputFile = fInputFile.readlines()
 
     if aArguments.help2:
-        GetComment()
+        get_comment()
+        
+    if aArguments.help2:
+        get_comment()
         
     if aArguments.cats:
         sCatList = get_categories()
-        print()
-        print("Current categories on file are: \n" + sCatList)
-        print()
+        print(f"\nCurrent categories on file are: \n{sCatList}\n")
         exit(0)
-        
+    
     if aArguments.help:
         sCatList = get_categories()
         sArgParser.print_help()
-        print()
-        print("Current categories on file are: " + sCatList)
-        print()
+        print(f"\nCurrent categories on file are: \n{sCatList}\n")
         exit(0)
     elif not aArguments.query:
-        print("sitedorks: error: the following argument is required: -query")
+        print(f"sitedorks: error: the following argument is required: -query")
         exit(2)
 except FileNotFoundError:
     print(sInputFile + " not found...")
@@ -228,7 +227,7 @@ dQuery = {}
 if aArguments.cat:
     iLines = sum(1 for s in lInputFile if "," + aArguments.cat in s)
     if iLines == 0:
-        print("Category '" + aArguments.cat + "' not found, exiting...")
+        print(f"Category '" + aArguments.cat + "' not found, exiting...")
         exit(2)
 else:
     iLines = len(open(sInputFile).readlines())
@@ -255,7 +254,7 @@ for sInputFileLine in lInputFile:
         if aArguments.cat and lInputFileLineCsv[1] not in lCategory:
             continue
     except:
-        print("Error in CSV file")
+        print(f"Error in CSV file")
 
     iCount += 1
     if iFirst == 0:
@@ -271,9 +270,6 @@ for sInputFileLine in lInputFile:
         iUrls += 1
         iFirst = 0
 
-
-#dQuery[iUrls] += sEndQuery
-
 for i in range(len(dQuery)):
     sSingleQuery = dQuery.get(i, '')
     if sSingleQuery:
@@ -282,4 +278,3 @@ for i in range(len(dQuery)):
         
         webbrowser.get(aArguments.browser).open(sSingleQuery + sEndQuery)
         time.sleep(int(aArguments.wait))
-
