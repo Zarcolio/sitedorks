@@ -71,7 +71,7 @@ optional arguments:
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
   -ubb                  Updates bug bounty files (in en out scope) and exits. Uses bbrecon.
-  -wait <seconds>       Wait x seconds, defaults to 5 seconds.
+  -wait <seconds>       Wait x seconds, defaults to 7 seconds.
 ```
 
 # Examples
