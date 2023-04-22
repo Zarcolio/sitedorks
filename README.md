@@ -8,7 +8,7 @@ By default, the following categories are on file:
 
 * analysis(13)
 * cloud(80) 
-* comm(81)
+* comm(80)
 * dev(68)
 * docs(75)
 * edu(12)
@@ -18,7 +18,7 @@ By default, the following categories are on file:
 * other(7)
 * remote(1)
 * shortener(37)
-* social(88)
+* social(87)
 * storage(9)
 
 # Why use SiteDorks?
