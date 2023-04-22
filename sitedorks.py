@@ -288,9 +288,11 @@ for sInputFileLine in lInputFile:
 dQuery[iUrls] += sEndQuery
 
 
-for sSingleQuery in dQuery.values():
-    if aArguments.echo:
-        print(sSingleQuery)
-    
-    webbrowser.open(sSingleQuery)
-    time.sleep(int(aArguments.wait))
+for i in range(len(dQuery)):
+    sSingleQuery = dQuery.get(i, '')
+    if sSingleQuery:
+        if aArguments.echo:
+            print(sSingleQuery)
+        
+        webbrowser.open(sSingleQuery)
+        time.sleep(int(aArguments.wait))
