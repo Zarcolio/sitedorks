@@ -10,7 +10,7 @@ By default, the following categories are on file:
 * cloud(81) 
 * comm(81)
 * dev(69)
-* docs(75)
+* docs(76)
 * edu(12)
 * fin(15)
 * forms(12)
