@@ -1,5 +1,24 @@
 # This is a list of Dutch ministery governmental websites.
 # Source for this file is https://github.com/openstate/datasets/blob/master/government_domain_names/Rijksoverheid.csv
+#	ar = Algemene Rekenkamer
+#	az = Algemene Zaken
+#	buza = Buitenlandse Zaken
+#	bzk = Binnenlandse Zaken en Koninkrijksrelaties
+#	caop = Centrum voor Arbeidsverhoudingen Overheidspersoneel
+#	def = Defensie
+#	ek = 
+#	ezk = Economische Zaken en Klimaat
+#	fin = Financiën
+#	ienw = Infrastructuur en Waterstaat
+#	jenv = Justitie en Veiligheid
+#	lnv = Landbouw, Natuur en Voedselkwaliteit
+#	no
+#	ocw = Onderwijs, Cultuur en Wetenschap
+#	rvs = Raad voor Volksgezondheid en Samenleving
+#	szw = Sociale Zaken en Werkgelegenheid
+#	tk
+#	vws = Volksgezondheid, Welzijn en Sport
+
 rekenkamer.nl,ar
 archiefweb.eu,az
 beeldkompas.nl,az
@@ -429,7 +448,6 @@ toolboxbeleidsevaluaties.nl,fin
 waarderingskamer.nl,fin
 weekvanhetgeld.nl,fin
 wijzeringeldzaken.nl,fin
-hogeraadvanadel.nl,hrva
 2todrive.nl,ienw
 a16rotterdam.nl,ienw
 a1oost.nl,ienw
@@ -842,7 +860,6 @@ wodc.nl,jenv
 wodc-repris.nl,jenv
 wordpolitievrijwilliger.nl,jenv
 wordtaakstrafbegeleider.nl,jenv
-lintjes.nl,kdno
 aanpakstikstof.nl,lnv
 agrimatie.nl,lnv
 agroberichtenbuitenland.nl,lnv
