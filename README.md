@@ -17,7 +17,7 @@ By default, the following categories are on file:
 * edu(13)
 * fin(15)
 * forms(12)
-* orgs(53)
+* orgs(54)
 * other(7)
 * remote(1)
 * shortener(38)
