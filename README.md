@@ -28,7 +28,7 @@ By default, the following categories are on file:
 Why wouldn't you just enter dorks for several websites manually? Think of this:
 * It's really easy to query different search engines.
 * Dorks can be executed per 1 or more categories.
-* It's easy to create different input files for different uses.
+* It's easy to create different input files for different uses, for example put dozens of domains in 1 file for a pentest.
 * Adding new websites to your search query can be arranged by just adding them to an input file (either a CSV with categories or just a list of sites).
 * It already has a lot of dorkable websites included.
 * The list with dorkable websites is updated regularly.
