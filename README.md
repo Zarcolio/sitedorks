@@ -33,7 +33,6 @@ Why wouldn't you just enter dorks for several websites manually? Think of this:
 * It already has a lot of dorkable websites included.
 * The list with dorkable websites is updated regularly.
 * Some search engines ignore too many keywords/characters in a query and with argument -count it's easy to split your dork into more queries.
-* It contains a list of several bug bounty platforms. With 1 command you can search domains of programs on several bug bounty platforms. Find the "easter egg" in this feature :)
 * It contains generic lists for other counties such as [China](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-cn.csv), [France](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-fr.csv), [Germany](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-de.csv), [Korea](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-kr.csv), [The Netherlands](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-nl.csv) and [Russia](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-ru.csv).
   * Need help here with generic lists for other countries, both with more entries in the current lists and with more lists. ![](https://img.shields.io/static/v1?label=&message=Help%20wanted&color=green)
 * It contains a list of Dutch governmental agencies and educational services. With 1 command you can search domains of either the Dutch government or educational services.
