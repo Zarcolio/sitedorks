@@ -72,7 +72,6 @@ optional arguments:
   -site <on|off|inurl>  Turn the 'site:' operator 'on' or 'off', or replace it with 'inurl:' (only for Google), defaults to 'on'.
   -excl <domains>       Excluded these domains from the search query.
   -echo                 Prints the search query URLs, for further use like piping or bookmarking.
-  -ubb                  Updates bug bounty files (in en out scope) and exits. Uses bbrecon.
   -wait <seconds>       Wait x seconds, defaults to 7 seconds.
 ```
 
@@ -91,23 +90,11 @@ Want to search for communication invites with Yandex but leave site: out of the 
 ```
 sitedorks -cat comm -site disable -engine yandex -query uber
 ```
-And if you  want to see which categories are on file, for example with the [hackerone](https://www.hackerone.com) platform:
+And if you  want to see which categories are on file, for example:
 ```
-sitedorks -file sitedorks-bbrecon.csv -cats
+sitedorks -file sitedorks.csv -cats
 ```
-If you want to download/update the bug bounty files, you can use the -ubb parameter (it uses [bbrecon](https://github.com/serain/bbrecon)):
-```
-sitedorks -ubb
-```
-The -ubb argument creates two files: sitedorks-bbrecon-inscope.csv and sitedorks-bbrecon-outscope.csv.
-Use the following command for finding exploitable systems or juicy info (always check if a system is in scope, although these these domains are in scope, it doesn't always mean that this subdomain or system is):
-```
-sitedorks -file sitedorks-bbrecon-inscope.csv -cat somevdp -query "exploitable systems/juicy info"
-```
-Use this command for finding juicy info only, because these domains are out of scope:
-```
-sitedorks -file sitedorks-bbrecon-outscope.csv -cat somevdp -query "juicy info"
-```
+
 For searching in Dutch (para)medical websites, use the following command:
 ```
 sitedorks -cat medi -file sitedorks-nl.csv -query somekeyword
