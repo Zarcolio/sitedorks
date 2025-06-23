@@ -9,7 +9,7 @@ Search Google, Bing, Brave, Ecosia, Yahoo or Yandex for a search term with sever
 
 By default, the following categories are on file: 
 
-* Ai (2)
+* ai (2)
 * analysis(13)
 * cloud(91)
 * comm(82)
