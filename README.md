@@ -3,6 +3,8 @@
 Want to get the latest updates?  
 Be sure to ⭐ this repo! 
 
+⭐ Now also available, [Sitedorks Web](https://antihacker.nl/sitedorks) ⭐ 
+
 # About [SiteDorks](https://github.com/Zarcolio/sitedorks) ![](https://img.shields.io/static/v1?label=&message=Help%20wanted&color=green)
 
 Search Google, Bing, Brave, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks.csv) is already provided, which contains ChatGPT, Grok, Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 599 dorkable websites is available.
