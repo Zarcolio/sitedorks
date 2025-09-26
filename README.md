@@ -7,7 +7,7 @@ Be sure to ⭐ this repo!
 
 # About [SiteDorks](https://github.com/Zarcolio/sitedorks) ![](https://img.shields.io/static/v1?label=&message=Help%20wanted&color=green)
 
-Search Google, Bing, Brave, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks.csv) is already provided, which contains ChatGPT, Grok, Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 600 dorkable websites is available.
+Search Google, Bing, Brave, Ecosia, Yahoo or Yandex for a search term with several websites. A [default list](https://github.com/Zarcolio/sitedorks/blob/master/csv/WorldWide.csv) is already provided, which contains ChatGPT, Grok, Github, Gitlab, Surveymonkey, Trello etc etc. Currently, a default list of 600 dorkable websites is available.
 
 By default, the following categories are on file: 
 
@@ -36,7 +36,7 @@ Why wouldn't you just enter dorks for several websites manually? Think of this:
 * It already has a lot of dorkable websites included.
 * The list with dorkable websites is updated regularly.
 * Some search engines ignore too many keywords/characters in a query and with argument -count it's easy to split your dork into more queries.
-* It contains generic lists for other counties such as [China](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-cn.csv), [France](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-fr.csv), [Germany](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-de.csv), [Korea](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-kr.csv), [The Netherlands](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-nl.csv) and [Russia](https://github.com/Zarcolio/sitedorks/blob/master/csv/sitedorks-ru.csv).
+* It contains generic lists for other counties such as [China](https://github.com/Zarcolio/sitedorks/blob/master/csv/China.csv), [France](https://github.com/Zarcolio/sitedorks/blob/master/csv/France.csv), [Germany](https://github.com/Zarcolio/sitedorks/blob/master/csv/Germany.csv), [Korea](https://github.com/Zarcolio/sitedorks/blob/master/csv/Korea.csv), [The Netherlands](https://github.com/Zarcolio/sitedorks/blob/master/csv/Netherlands.csv) and [Russia](https://github.com/Zarcolio/sitedorks/blob/master/csv/Russia.csv).
   * Need help here with generic lists for other countries, both with more entries in the current lists and with more lists. ![](https://img.shields.io/static/v1?label=&message=Help%20wanted&color=green)
 * It contains a list of Dutch governmental agencies and educational services. With 1 command you can search domains of either the Dutch government or educational services.
   * Need help here with other lists that can be useful, for example domains of government and educational services in other countries. ![](https://img.shields.io/static/v1?label=&message=Help%20wanted&color=green)
