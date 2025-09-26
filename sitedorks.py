@@ -158,7 +158,7 @@ if aArguments.file:
     else:
         sInputFile = os.path.dirname(os.path.realpath(sys.argv[0])) + "/csv/" + aArguments.file
 else:
-    sInputFile = os.path.dirname(os.path.realpath(sys.argv[0])) + "/csv/sitedorks.csv"
+    sInputFile = os.path.dirname(os.path.realpath(sys.argv[0])) + "/csv/WorldWide.csv"
 
 if aArguments.site == "on":
     sSite = "site:"
