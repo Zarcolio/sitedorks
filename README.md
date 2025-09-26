@@ -3,7 +3,7 @@
 Want to get the latest updates?  
 Be sure to ⭐ this repo! 
 
-⭐ Now also available, [Sitedorks Web](https://antihacker.nl/sitedorks) ⭐ 
+⭐ Now also available, **[Sitedorks Web](https://antihacker.nl/sitedorks)** ⭐ 
 
 # About [SiteDorks](https://github.com/Zarcolio/sitedorks) ![](https://img.shields.io/static/v1?label=&message=Help%20wanted&color=green)
 
