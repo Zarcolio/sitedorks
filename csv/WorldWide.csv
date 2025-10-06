@@ -1,4 +1,4 @@
-# This is the default input file for SiteDorks.# It contains a large list of sites and categories meant for searching internationally.
+, # This is the default input file for SiteDorks.# It contains a large list of sites and categories meant for searching internationally.
 1drv.ms,storage
 4channel.org,social
 4plebs.org,social
@@ -326,6 +326,7 @@ kickstarter.com,fin
 ko-fi.com,fin
 kipdf.com,docs
 kupdf.net,docs
+leadiq.com/c,orgs
 liberapay.com,fin
 libraries.io,dev
 line.me,comm
