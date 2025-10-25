@@ -18,6 +18,7 @@ By default, the following categories are on file:
 * dev(70)
 * docs(79)
 * edu(13)
+* events (2)
 * fin(17)
 * forms(15)
 * orgs(59)
