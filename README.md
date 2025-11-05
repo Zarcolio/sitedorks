@@ -11,20 +11,20 @@ Search Google, Bing, Brave, Ecosia, Yahoo or Yandex for a search term with sever
 
 By default, the following categories are on file: 
 
-* ai (6)
+* ai (4)
 * analysis (13)
-* cloud (92)
+* cloud (100)
 * comm (82)
-* dev (70)
+* dev (69)
 * docs (79)
-* edu (13)
+* edu (12)
 * events (15)
 * fin (17)
 * forms (15)
 * orgs (58)
 * other (7)
 * shortener (39)
-* social (100)
+* social (99)
 * storage (9)
 
 # Why use SiteDorks?
