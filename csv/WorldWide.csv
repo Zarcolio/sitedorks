@@ -1,4 +1,4 @@
-# This is the default input file for SiteDorks.# It contains a large list of sites and categories meant for searching internationally.
+2# This is the default input file for SiteDorks.# It contains a large list of sites and categories meant for searching internationally.
 1drv.ms,storage
 4channel.org,social
 4plebs.org,social
@@ -440,6 +440,7 @@ planoncloud.com,cloud
 play.google.com,other
 plesk.page,cloud
 postman.com,dev
+powerappsportals.com,cloud
 powershow.com,docs
 powtoon.com/online-presentation,docs
 prezi.com,docs
