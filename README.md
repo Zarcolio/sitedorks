@@ -13,7 +13,7 @@ By default, the following categories are on file:
 
 * ai (6)
 * analysis (13)
-* cloud (104)
+* cloud (105)
 * comm (83)
 * ddns (3)
 * dev (69)
