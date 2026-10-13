@@ -53,6 +53,14 @@ bash install.sh
 ```
 If you're running into trouble running SiteDorks, please drop me an [issue](https://github.com/Zarcolio/sitedorks/issues) and I'll try to fix it :)
 
+Alternatively, on Linux, [OTinstaller](https://github.com/OSINTVerseHQ/OTinstaller) can install SiteDorks from this repository into its own virtualenv and run it from any directory. It is a third-party tool manager, so please report problems with it [on the OTinstaller tracker](https://github.com/OSINTVerseHQ/OTinstaller/issues).
+```
+pipx install otinstaller
+otinstaller install sitedorks
+otinstaller run sitedorks -- q:'john doe' -cat social
+```
+`q:` is passed to SiteDorks as `-query`; the other arguments go through unchanged.
+
 # Usage
 ```
 usage: sitedorks [-h] [-browser <browser>] [-cat <category>] [-cats] [-count <count>] [-engine <engine>] [-file <file>]
