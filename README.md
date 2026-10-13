@@ -56,6 +56,7 @@ If you're running into trouble running SiteDorks, please drop me an [issue](http
 Alternatively, on Linux, [OTinstaller](https://github.com/OSINTVerseHQ/OTinstaller) can install SiteDorks from this repository into its own virtualenv and run it from any directory. It is a third-party tool manager, so please report problems with it [on the OTinstaller tracker](https://github.com/OSINTVerseHQ/OTinstaller/issues).
 ```
 pipx install otinstaller
+otinstaller init
 otinstaller install sitedorks
 otinstaller run sitedorks -- q:'john doe' -cat social
 ```
